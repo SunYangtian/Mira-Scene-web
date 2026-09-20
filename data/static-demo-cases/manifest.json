@@ -1,0 +1,1725 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "case_id": "012_hotel_lobby",
+      "label": "012 hotel lobby",
+      "input_image": "data/static-demo-cases/012_hotel_lobby/input/scene.png",
+      "annotation_url": "data/static-demo-cases/012_hotel_lobby/review/annotation.json",
+      "masks": [
+        {
+          "id": "object_000",
+          "name": "ottoman",
+          "url": "data/static-demo-cases/012_hotel_lobby/review/mask_000.png",
+          "mask_file": "mask_000.png"
+        },
+        {
+          "id": "object_001",
+          "name": "coffee table",
+          "url": "data/static-demo-cases/012_hotel_lobby/review/mask_001.png",
+          "mask_file": "mask_001.png"
+        },
+        {
+          "id": "object_002",
+          "name": "sectional sofa",
+          "url": "data/static-demo-cases/012_hotel_lobby/review/mask_002.png",
+          "mask_file": "mask_002.png"
+        },
+        {
+          "id": "object_003",
+          "name": "armchair",
+          "url": "data/static-demo-cases/012_hotel_lobby/review/mask_003.png",
+          "mask_file": "mask_003.png"
+        },
+        {
+          "id": "object_004",
+          "name": "armchair",
+          "url": "data/static-demo-cases/012_hotel_lobby/review/mask_004.png",
+          "mask_file": "mask_004.png"
+        },
+        {
+          "id": "object_005",
+          "name": "potted plant",
+          "url": "data/static-demo-cases/012_hotel_lobby/review/mask_005.png",
+          "mask_file": "mask_005.png"
+        }
+      ],
+      "scene_methods": [
+        {
+          "method": "ppd_depth",
+          "scene_url": null,
+          "scene_with_floor_url": "data/static-demo-cases/012_hotel_lobby/scene/scene_with_floor.glb",
+          "projection_url": "data/static-demo-cases/012_hotel_lobby/scene/proj.png"
+        }
+      ],
+      "environment_url": "data/static-demo-cases/012_hotel_lobby/environment/environment_equirect.png",
+      "scene_graph_url": "data/static-demo-cases/012_hotel_lobby/scene_graph.json",
+      "review": {
+        "revision": 0,
+        "has_current": true
+      },
+      "stages": [
+        {
+          "id": 0,
+          "key": "segmentation",
+          "label": "Segmentation",
+          "ready": true,
+          "summary": "6 masks",
+          "files": [
+            {
+              "name": "review/annotation.json",
+              "url": "data/static-demo-cases/012_hotel_lobby/review/annotation.json"
+            }
+          ]
+        },
+        {
+          "id": 1,
+          "key": "inference_ccm_mesh",
+          "label": "Inference CCM + Mesh",
+          "ready": true,
+          "summary": "6 object(s) with CCM and mesh outputs",
+          "files": [
+            {
+              "name": "CCM/rgb_ccm_cropped.png",
+              "url": "data/static-demo-cases/012_hotel_lobby/CCM/rgb_ccm_cropped.png"
+            },
+            {
+              "name": "CCM/canonical_coord_map_restored.png",
+              "url": "data/static-demo-cases/012_hotel_lobby/CCM/canonical_coord_map_restored.png"
+            },
+            {
+              "name": "CCM/canonical_pcd_000_overlay.ply",
+              "url": "data/static-demo-cases/012_hotel_lobby/CCM/canonical_pcd_000_overlay.ply"
+            },
+            {
+              "name": "CCM/canonical_pcd_001_overlay.ply",
+              "url": "data/static-demo-cases/012_hotel_lobby/CCM/canonical_pcd_001_overlay.ply"
+            },
+            {
+              "name": "CCM/canonical_pcd_002_overlay.ply",
+              "url": "data/static-demo-cases/012_hotel_lobby/CCM/canonical_pcd_002_overlay.ply"
+            },
+            {
+              "name": "CCM/canonical_pcd_003_overlay.ply",
+              "url": "data/static-demo-cases/012_hotel_lobby/CCM/canonical_pcd_003_overlay.ply"
+            },
+            {
+              "name": "CCM/canonical_pcd_004_overlay.ply",
+              "url": "data/static-demo-cases/012_hotel_lobby/CCM/canonical_pcd_004_overlay.ply"
+            },
+            {
+              "name": "CCM/canonical_pcd_005_overlay.ply",
+              "url": "data/static-demo-cases/012_hotel_lobby/CCM/canonical_pcd_005_overlay.ply"
+            },
+            {
+              "name": "mesh/000.glb",
+              "url": "data/static-demo-cases/012_hotel_lobby/mesh/000.glb"
+            },
+            {
+              "name": "mesh/001.glb",
+              "url": "data/static-demo-cases/012_hotel_lobby/mesh/001.glb"
+            },
+            {
+              "name": "mesh/002.glb",
+              "url": "data/static-demo-cases/012_hotel_lobby/mesh/002.glb"
+            },
+            {
+              "name": "mesh/003.glb",
+              "url": "data/static-demo-cases/012_hotel_lobby/mesh/003.glb"
+            },
+            {
+              "name": "mesh/004.glb",
+              "url": "data/static-demo-cases/012_hotel_lobby/mesh/004.glb"
+            },
+            {
+              "name": "mesh/005.glb",
+              "url": "data/static-demo-cases/012_hotel_lobby/mesh/005.glb"
+            }
+          ],
+          "items": [
+            {
+              "index": 0,
+              "label": "ottoman",
+              "rgb_url": "data/static-demo-cases/012_hotel_lobby/input/scene.png",
+              "mask_url": "data/static-demo-cases/012_hotel_lobby/review/mask_000.png",
+              "ccm_url": "data/static-demo-cases/012_hotel_lobby/CCM/canonical_coord_map_restored.png",
+              "cropped_url": "data/static-demo-cases/012_hotel_lobby/CCM/rgb_ccm_cropped.png",
+              "overlay_url": "data/static-demo-cases/012_hotel_lobby/CCM/canonical_pcd_000_overlay.ply",
+              "mesh_url": "data/static-demo-cases/012_hotel_lobby/mesh/000.glb",
+              "cropped_size": {
+                "width": 518,
+                "height": 518
+              },
+              "cropped_crops": {
+                "rgb": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 518,
+                  "height": 518
+                },
+                "mask": {
+                  "x": 518,
+                  "y": 0,
+                  "width": 518,
+                  "height": 518
+                },
+                "ccm": {
+                  "x": 1036,
+                  "y": 0,
+                  "width": 518,
+                  "height": 518
+                }
+              }
+            },
+            {
+              "index": 1,
+              "label": "coffee table",
+              "rgb_url": "data/static-demo-cases/012_hotel_lobby/input/scene.png",
+              "mask_url": "data/static-demo-cases/012_hotel_lobby/review/mask_001.png",
+              "ccm_url": "data/static-demo-cases/012_hotel_lobby/CCM/canonical_coord_map_restored.png",
+              "cropped_url": "data/static-demo-cases/012_hotel_lobby/CCM/rgb_ccm_cropped.png",
+              "overlay_url": "data/static-demo-cases/012_hotel_lobby/CCM/canonical_pcd_001_overlay.ply",
+              "mesh_url": "data/static-demo-cases/012_hotel_lobby/mesh/001.glb",
+              "cropped_size": {
+                "width": 518,
+                "height": 518
+              },
+              "cropped_crops": {
+                "rgb": {
+                  "x": 0,
+                  "y": 518,
+                  "width": 518,
+                  "height": 518
+                },
+                "mask": {
+                  "x": 518,
+                  "y": 518,
+                  "width": 518,
+                  "height": 518
+                },
+                "ccm": {
+                  "x": 1036,
+                  "y": 518,
+                  "width": 518,
+                  "height": 518
+                }
+              }
+            },
+            {
+              "index": 2,
+              "label": "sectional sofa",
+              "rgb_url": "data/static-demo-cases/012_hotel_lobby/input/scene.png",
+              "mask_url": "data/static-demo-cases/012_hotel_lobby/review/mask_002.png",
+              "ccm_url": "data/static-demo-cases/012_hotel_lobby/CCM/canonical_coord_map_restored.png",
+              "cropped_url": "data/static-demo-cases/012_hotel_lobby/CCM/rgb_ccm_cropped.png",
+              "overlay_url": "data/static-demo-cases/012_hotel_lobby/CCM/canonical_pcd_002_overlay.ply",
+              "mesh_url": "data/static-demo-cases/012_hotel_lobby/mesh/002.glb",
+              "cropped_size": {
+                "width": 518,
+                "height": 518
+              },
+              "cropped_crops": {
+                "rgb": {
+                  "x": 0,
+                  "y": 1036,
+                  "width": 518,
+                  "height": 518
+                },
+                "mask": {
+                  "x": 518,
+                  "y": 1036,
+                  "width": 518,
+                  "height": 518
+                },
+                "ccm": {
+                  "x": 1036,
+                  "y": 1036,
+                  "width": 518,
+                  "height": 518
+                }
+              }
+            },
+            {
+              "index": 3,
+              "label": "armchair",
+              "rgb_url": "data/static-demo-cases/012_hotel_lobby/input/scene.png",
+              "mask_url": "data/static-demo-cases/012_hotel_lobby/review/mask_003.png",
+              "ccm_url": "data/static-demo-cases/012_hotel_lobby/CCM/canonical_coord_map_restored.png",
+              "cropped_url": "data/static-demo-cases/012_hotel_lobby/CCM/rgb_ccm_cropped.png",
+              "overlay_url": "data/static-demo-cases/012_hotel_lobby/CCM/canonical_pcd_003_overlay.ply",
+              "mesh_url": "data/static-demo-cases/012_hotel_lobby/mesh/003.glb",
+              "cropped_size": {
+                "width": 518,
+                "height": 518
+              },
+              "cropped_crops": {
+                "rgb": {
+                  "x": 0,
+                  "y": 1554,
+                  "width": 518,
+                  "height": 518
+                },
+                "mask": {
+                  "x": 518,
+                  "y": 1554,
+                  "width": 518,
+                  "height": 518
+                },
+                "ccm": {
+                  "x": 1036,
+                  "y": 1554,
+                  "width": 518,
+                  "height": 518
+                }
+              }
+            },
+            {
+              "index": 4,
+              "label": "armchair",
+              "rgb_url": "data/static-demo-cases/012_hotel_lobby/input/scene.png",
+              "mask_url": "data/static-demo-cases/012_hotel_lobby/review/mask_004.png",
+              "ccm_url": "data/static-demo-cases/012_hotel_lobby/CCM/canonical_coord_map_restored.png",
+              "cropped_url": "data/static-demo-cases/012_hotel_lobby/CCM/rgb_ccm_cropped.png",
+              "overlay_url": "data/static-demo-cases/012_hotel_lobby/CCM/canonical_pcd_004_overlay.ply",
+              "mesh_url": "data/static-demo-cases/012_hotel_lobby/mesh/004.glb",
+              "cropped_size": {
+                "width": 518,
+                "height": 518
+              },
+              "cropped_crops": {
+                "rgb": {
+                  "x": 0,
+                  "y": 2072,
+                  "width": 518,
+                  "height": 518
+                },
+                "mask": {
+                  "x": 518,
+                  "y": 2072,
+                  "width": 518,
+                  "height": 518
+                },
+                "ccm": {
+                  "x": 1036,
+                  "y": 2072,
+                  "width": 518,
+                  "height": 518
+                }
+              }
+            },
+            {
+              "index": 5,
+              "label": "potted plant",
+              "rgb_url": "data/static-demo-cases/012_hotel_lobby/input/scene.png",
+              "mask_url": "data/static-demo-cases/012_hotel_lobby/review/mask_005.png",
+              "ccm_url": "data/static-demo-cases/012_hotel_lobby/CCM/canonical_coord_map_restored.png",
+              "cropped_url": "data/static-demo-cases/012_hotel_lobby/CCM/rgb_ccm_cropped.png",
+              "overlay_url": "data/static-demo-cases/012_hotel_lobby/CCM/canonical_pcd_005_overlay.ply",
+              "mesh_url": "data/static-demo-cases/012_hotel_lobby/mesh/005.glb",
+              "cropped_size": {
+                "width": 518,
+                "height": 518
+              },
+              "cropped_crops": {
+                "rgb": {
+                  "x": 0,
+                  "y": 2590,
+                  "width": 518,
+                  "height": 518
+                },
+                "mask": {
+                  "x": 518,
+                  "y": 2590,
+                  "width": 518,
+                  "height": 518
+                },
+                "ccm": {
+                  "x": 1036,
+                  "y": 2590,
+                  "width": 518,
+                  "height": 518
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "key": "construct_scene",
+          "label": "Construct Scene",
+          "ready": true,
+          "summary": "Constructed scene, scene graph, and environment are available",
+          "files": [
+            {
+              "name": "scene/ppd_depth/scene_with_floor.glb",
+              "url": "data/static-demo-cases/012_hotel_lobby/scene/scene_with_floor.glb"
+            }
+          ],
+          "methods": [
+            {
+              "method": "ppd_depth",
+              "scene_url": null,
+              "scene_with_floor_url": "data/static-demo-cases/012_hotel_lobby/scene/scene_with_floor.glb",
+              "projection_url": "data/static-demo-cases/012_hotel_lobby/scene/proj.png"
+            }
+          ]
+        }
+      ],
+      "capabilities": {
+        "auto_segment": false,
+        "sam3_prompt": false,
+        "pipeline": false
+      }
+    },
+    {
+      "case_id": "Gemini_Generated_Image_sjbz27sjbz27sjbz",
+      "label": "Gemini Generated Image sjbz27sjbz27sjbz",
+      "input_image": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/input/scene.png",
+      "annotation_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/review/annotation.json",
+      "masks": [
+        {
+          "id": "object_000",
+          "name": "wooden bed",
+          "url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/review/mask_000.png",
+          "mask_file": "mask_000.png"
+        },
+        {
+          "id": "object_001",
+          "name": "pink coffee table",
+          "url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/review/mask_001.png",
+          "mask_file": "mask_001.png"
+        },
+        {
+          "id": "object_002",
+          "name": "beach ball",
+          "url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/review/mask_002.png",
+          "mask_file": "mask_002.png"
+        },
+        {
+          "id": "object_003",
+          "name": "wooden nightstand",
+          "url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/review/mask_003.png",
+          "mask_file": "mask_003.png"
+        },
+        {
+          "id": "object_004",
+          "name": "fabric backpack",
+          "url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/review/mask_004.png",
+          "mask_file": "mask_004.png"
+        },
+        {
+          "id": "object_005",
+          "name": "toy rocket",
+          "url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/review/mask_005.png",
+          "mask_file": "mask_005.png"
+        },
+        {
+          "id": "object_006",
+          "name": "wooden easel",
+          "url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/review/mask_006.png",
+          "mask_file": "mask_006.png"
+        },
+        {
+          "id": "object_007",
+          "name": "floor lamp",
+          "url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/review/mask_007.png",
+          "mask_file": "mask_007.png"
+        },
+        {
+          "id": "object_008",
+          "name": "floor cushion",
+          "url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/review/mask_008.png",
+          "mask_file": "mask_008.png"
+        },
+        {
+          "id": "object_009",
+          "name": "floor cushion",
+          "url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/review/mask_009.png",
+          "mask_file": "mask_009.png"
+        }
+      ],
+      "scene_methods": [
+        {
+          "method": "ppd_depth",
+          "scene_url": null,
+          "scene_with_floor_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/scene/scene_with_floor.glb",
+          "projection_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/scene/proj.png"
+        }
+      ],
+      "environment_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/environment/environment_equirect.png",
+      "scene_graph_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/scene_graph.json",
+      "review": {
+        "revision": 0,
+        "has_current": true
+      },
+      "stages": [
+        {
+          "id": 0,
+          "key": "segmentation",
+          "label": "Segmentation",
+          "ready": true,
+          "summary": "10 masks",
+          "files": [
+            {
+              "name": "review/annotation.json",
+              "url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/review/annotation.json"
+            }
+          ]
+        },
+        {
+          "id": 1,
+          "key": "inference_ccm_mesh",
+          "label": "Inference CCM + Mesh",
+          "ready": true,
+          "summary": "10 object(s) with CCM and mesh outputs",
+          "files": [
+            {
+              "name": "CCM/rgb_ccm_cropped.png",
+              "url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/CCM/rgb_ccm_cropped.png"
+            },
+            {
+              "name": "CCM/canonical_coord_map_restored.png",
+              "url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/CCM/canonical_coord_map_restored.png"
+            },
+            {
+              "name": "CCM/canonical_pcd_000_overlay.ply",
+              "url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/CCM/canonical_pcd_000_overlay.ply"
+            },
+            {
+              "name": "CCM/canonical_pcd_001_overlay.ply",
+              "url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/CCM/canonical_pcd_001_overlay.ply"
+            },
+            {
+              "name": "CCM/canonical_pcd_002_overlay.ply",
+              "url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/CCM/canonical_pcd_002_overlay.ply"
+            },
+            {
+              "name": "CCM/canonical_pcd_003_overlay.ply",
+              "url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/CCM/canonical_pcd_003_overlay.ply"
+            },
+            {
+              "name": "CCM/canonical_pcd_004_overlay.ply",
+              "url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/CCM/canonical_pcd_004_overlay.ply"
+            },
+            {
+              "name": "CCM/canonical_pcd_005_overlay.ply",
+              "url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/CCM/canonical_pcd_005_overlay.ply"
+            },
+            {
+              "name": "CCM/canonical_pcd_006_overlay.ply",
+              "url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/CCM/canonical_pcd_006_overlay.ply"
+            },
+            {
+              "name": "CCM/canonical_pcd_007_overlay.ply",
+              "url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/CCM/canonical_pcd_007_overlay.ply"
+            },
+            {
+              "name": "CCM/canonical_pcd_008_overlay.ply",
+              "url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/CCM/canonical_pcd_008_overlay.ply"
+            },
+            {
+              "name": "CCM/canonical_pcd_009_overlay.ply",
+              "url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/CCM/canonical_pcd_009_overlay.ply"
+            },
+            {
+              "name": "mesh/000.glb",
+              "url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/mesh/000.glb"
+            },
+            {
+              "name": "mesh/001.glb",
+              "url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/mesh/001.glb"
+            },
+            {
+              "name": "mesh/002.glb",
+              "url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/mesh/002.glb"
+            },
+            {
+              "name": "mesh/003.glb",
+              "url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/mesh/003.glb"
+            },
+            {
+              "name": "mesh/004.glb",
+              "url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/mesh/004.glb"
+            },
+            {
+              "name": "mesh/005.glb",
+              "url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/mesh/005.glb"
+            },
+            {
+              "name": "mesh/006.glb",
+              "url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/mesh/006.glb"
+            },
+            {
+              "name": "mesh/007.glb",
+              "url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/mesh/007.glb"
+            },
+            {
+              "name": "mesh/008.glb",
+              "url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/mesh/008.glb"
+            },
+            {
+              "name": "mesh/009.glb",
+              "url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/mesh/009.glb"
+            }
+          ],
+          "items": [
+            {
+              "index": 0,
+              "label": "wooden bed",
+              "rgb_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/input/scene.png",
+              "mask_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/review/mask_000.png",
+              "ccm_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/CCM/canonical_coord_map_restored.png",
+              "cropped_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/CCM/rgb_ccm_cropped.png",
+              "overlay_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/CCM/canonical_pcd_000_overlay.ply",
+              "mesh_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/mesh/000.glb",
+              "cropped_size": {
+                "width": 518,
+                "height": 518
+              },
+              "cropped_crops": {
+                "rgb": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 518,
+                  "height": 518
+                },
+                "mask": {
+                  "x": 518,
+                  "y": 0,
+                  "width": 518,
+                  "height": 518
+                },
+                "ccm": {
+                  "x": 1036,
+                  "y": 0,
+                  "width": 518,
+                  "height": 518
+                }
+              }
+            },
+            {
+              "index": 1,
+              "label": "pink coffee table",
+              "rgb_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/input/scene.png",
+              "mask_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/review/mask_001.png",
+              "ccm_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/CCM/canonical_coord_map_restored.png",
+              "cropped_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/CCM/rgb_ccm_cropped.png",
+              "overlay_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/CCM/canonical_pcd_001_overlay.ply",
+              "mesh_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/mesh/001.glb",
+              "cropped_size": {
+                "width": 518,
+                "height": 518
+              },
+              "cropped_crops": {
+                "rgb": {
+                  "x": 0,
+                  "y": 518,
+                  "width": 518,
+                  "height": 518
+                },
+                "mask": {
+                  "x": 518,
+                  "y": 518,
+                  "width": 518,
+                  "height": 518
+                },
+                "ccm": {
+                  "x": 1036,
+                  "y": 518,
+                  "width": 518,
+                  "height": 518
+                }
+              }
+            },
+            {
+              "index": 2,
+              "label": "beach ball",
+              "rgb_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/input/scene.png",
+              "mask_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/review/mask_002.png",
+              "ccm_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/CCM/canonical_coord_map_restored.png",
+              "cropped_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/CCM/rgb_ccm_cropped.png",
+              "overlay_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/CCM/canonical_pcd_002_overlay.ply",
+              "mesh_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/mesh/002.glb",
+              "cropped_size": {
+                "width": 518,
+                "height": 518
+              },
+              "cropped_crops": {
+                "rgb": {
+                  "x": 0,
+                  "y": 1036,
+                  "width": 518,
+                  "height": 518
+                },
+                "mask": {
+                  "x": 518,
+                  "y": 1036,
+                  "width": 518,
+                  "height": 518
+                },
+                "ccm": {
+                  "x": 1036,
+                  "y": 1036,
+                  "width": 518,
+                  "height": 518
+                }
+              }
+            },
+            {
+              "index": 3,
+              "label": "wooden nightstand",
+              "rgb_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/input/scene.png",
+              "mask_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/review/mask_003.png",
+              "ccm_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/CCM/canonical_coord_map_restored.png",
+              "cropped_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/CCM/rgb_ccm_cropped.png",
+              "overlay_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/CCM/canonical_pcd_003_overlay.ply",
+              "mesh_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/mesh/003.glb",
+              "cropped_size": {
+                "width": 518,
+                "height": 518
+              },
+              "cropped_crops": {
+                "rgb": {
+                  "x": 0,
+                  "y": 1554,
+                  "width": 518,
+                  "height": 518
+                },
+                "mask": {
+                  "x": 518,
+                  "y": 1554,
+                  "width": 518,
+                  "height": 518
+                },
+                "ccm": {
+                  "x": 1036,
+                  "y": 1554,
+                  "width": 518,
+                  "height": 518
+                }
+              }
+            },
+            {
+              "index": 4,
+              "label": "fabric backpack",
+              "rgb_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/input/scene.png",
+              "mask_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/review/mask_004.png",
+              "ccm_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/CCM/canonical_coord_map_restored.png",
+              "cropped_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/CCM/rgb_ccm_cropped.png",
+              "overlay_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/CCM/canonical_pcd_004_overlay.ply",
+              "mesh_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/mesh/004.glb",
+              "cropped_size": {
+                "width": 518,
+                "height": 518
+              },
+              "cropped_crops": {
+                "rgb": {
+                  "x": 0,
+                  "y": 2072,
+                  "width": 518,
+                  "height": 518
+                },
+                "mask": {
+                  "x": 518,
+                  "y": 2072,
+                  "width": 518,
+                  "height": 518
+                },
+                "ccm": {
+                  "x": 1036,
+                  "y": 2072,
+                  "width": 518,
+                  "height": 518
+                }
+              }
+            },
+            {
+              "index": 5,
+              "label": "toy rocket",
+              "rgb_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/input/scene.png",
+              "mask_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/review/mask_005.png",
+              "ccm_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/CCM/canonical_coord_map_restored.png",
+              "cropped_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/CCM/rgb_ccm_cropped.png",
+              "overlay_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/CCM/canonical_pcd_005_overlay.ply",
+              "mesh_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/mesh/005.glb",
+              "cropped_size": {
+                "width": 518,
+                "height": 518
+              },
+              "cropped_crops": {
+                "rgb": {
+                  "x": 0,
+                  "y": 2590,
+                  "width": 518,
+                  "height": 518
+                },
+                "mask": {
+                  "x": 518,
+                  "y": 2590,
+                  "width": 518,
+                  "height": 518
+                },
+                "ccm": {
+                  "x": 1036,
+                  "y": 2590,
+                  "width": 518,
+                  "height": 518
+                }
+              }
+            },
+            {
+              "index": 6,
+              "label": "wooden easel",
+              "rgb_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/input/scene.png",
+              "mask_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/review/mask_006.png",
+              "ccm_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/CCM/canonical_coord_map_restored.png",
+              "cropped_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/CCM/rgb_ccm_cropped.png",
+              "overlay_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/CCM/canonical_pcd_006_overlay.ply",
+              "mesh_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/mesh/006.glb",
+              "cropped_size": {
+                "width": 518,
+                "height": 518
+              },
+              "cropped_crops": {
+                "rgb": {
+                  "x": 0,
+                  "y": 3108,
+                  "width": 518,
+                  "height": 518
+                },
+                "mask": {
+                  "x": 518,
+                  "y": 3108,
+                  "width": 518,
+                  "height": 518
+                },
+                "ccm": {
+                  "x": 1036,
+                  "y": 3108,
+                  "width": 518,
+                  "height": 518
+                }
+              }
+            },
+            {
+              "index": 7,
+              "label": "floor lamp",
+              "rgb_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/input/scene.png",
+              "mask_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/review/mask_007.png",
+              "ccm_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/CCM/canonical_coord_map_restored.png",
+              "cropped_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/CCM/rgb_ccm_cropped.png",
+              "overlay_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/CCM/canonical_pcd_007_overlay.ply",
+              "mesh_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/mesh/007.glb",
+              "cropped_size": {
+                "width": 518,
+                "height": 518
+              },
+              "cropped_crops": {
+                "rgb": {
+                  "x": 0,
+                  "y": 3626,
+                  "width": 518,
+                  "height": 518
+                },
+                "mask": {
+                  "x": 518,
+                  "y": 3626,
+                  "width": 518,
+                  "height": 518
+                },
+                "ccm": {
+                  "x": 1036,
+                  "y": 3626,
+                  "width": 518,
+                  "height": 518
+                }
+              }
+            },
+            {
+              "index": 8,
+              "label": "floor cushion",
+              "rgb_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/input/scene.png",
+              "mask_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/review/mask_008.png",
+              "ccm_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/CCM/canonical_coord_map_restored.png",
+              "cropped_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/CCM/rgb_ccm_cropped.png",
+              "overlay_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/CCM/canonical_pcd_008_overlay.ply",
+              "mesh_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/mesh/008.glb",
+              "cropped_size": {
+                "width": 518,
+                "height": 518
+              },
+              "cropped_crops": {
+                "rgb": {
+                  "x": 0,
+                  "y": 4144,
+                  "width": 518,
+                  "height": 518
+                },
+                "mask": {
+                  "x": 518,
+                  "y": 4144,
+                  "width": 518,
+                  "height": 518
+                },
+                "ccm": {
+                  "x": 1036,
+                  "y": 4144,
+                  "width": 518,
+                  "height": 518
+                }
+              }
+            },
+            {
+              "index": 9,
+              "label": "floor cushion",
+              "rgb_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/input/scene.png",
+              "mask_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/review/mask_009.png",
+              "ccm_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/CCM/canonical_coord_map_restored.png",
+              "cropped_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/CCM/rgb_ccm_cropped.png",
+              "overlay_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/CCM/canonical_pcd_009_overlay.ply",
+              "mesh_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/mesh/009.glb",
+              "cropped_size": {
+                "width": 518,
+                "height": 518
+              },
+              "cropped_crops": {
+                "rgb": {
+                  "x": 0,
+                  "y": 4662,
+                  "width": 518,
+                  "height": 518
+                },
+                "mask": {
+                  "x": 518,
+                  "y": 4662,
+                  "width": 518,
+                  "height": 518
+                },
+                "ccm": {
+                  "x": 1036,
+                  "y": 4662,
+                  "width": 518,
+                  "height": 518
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "key": "construct_scene",
+          "label": "Construct Scene",
+          "ready": true,
+          "summary": "Constructed scene, scene graph, and environment are available",
+          "files": [
+            {
+              "name": "scene/ppd_depth/scene_with_floor.glb",
+              "url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/scene/scene_with_floor.glb"
+            }
+          ],
+          "methods": [
+            {
+              "method": "ppd_depth",
+              "scene_url": null,
+              "scene_with_floor_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/scene/scene_with_floor.glb",
+              "projection_url": "data/static-demo-cases/Gemini_Generated_Image_sjbz27sjbz27sjbz/scene/proj.png"
+            }
+          ]
+        }
+      ],
+      "capabilities": {
+        "auto_segment": false,
+        "sam3_prompt": false,
+        "pipeline": false
+      }
+    },
+    {
+      "case_id": "003_home_office",
+      "label": "003 home office",
+      "input_image": "data/static-demo-cases/003_home_office/input/scene.png",
+      "annotation_url": "data/static-demo-cases/003_home_office/review/annotation.json",
+      "masks": [
+        {
+          "id": "object_000",
+          "name": "floor lamp",
+          "url": "data/static-demo-cases/003_home_office/review/mask_000.png",
+          "mask_file": "mask_000.png"
+        },
+        {
+          "id": "object_001",
+          "name": "bookshelf",
+          "url": "data/static-demo-cases/003_home_office/review/mask_001.png",
+          "mask_file": "mask_001.png"
+        },
+        {
+          "id": "object_002",
+          "name": "desk",
+          "url": "data/static-demo-cases/003_home_office/review/mask_002.png",
+          "mask_file": "mask_002.png"
+        },
+        {
+          "id": "object_003",
+          "name": "office chair",
+          "url": "data/static-demo-cases/003_home_office/review/mask_003.png",
+          "mask_file": "mask_003.png"
+        },
+        {
+          "id": "object_004",
+          "name": "cabinet",
+          "url": "data/static-demo-cases/003_home_office/review/mask_004.png",
+          "mask_file": "mask_004.png"
+        }
+      ],
+      "scene_methods": [
+        {
+          "method": "ppd_depth",
+          "scene_url": null,
+          "scene_with_floor_url": "data/static-demo-cases/003_home_office/scene/scene_with_floor.glb",
+          "projection_url": "data/static-demo-cases/003_home_office/scene/proj.png"
+        }
+      ],
+      "environment_url": "data/static-demo-cases/003_home_office/environment/environment_equirect.png",
+      "scene_graph_url": "data/static-demo-cases/003_home_office/scene_graph.json",
+      "review": {
+        "revision": 0,
+        "has_current": true
+      },
+      "stages": [
+        {
+          "id": 0,
+          "key": "segmentation",
+          "label": "Segmentation",
+          "ready": true,
+          "summary": "5 masks",
+          "files": [
+            {
+              "name": "review/annotation.json",
+              "url": "data/static-demo-cases/003_home_office/review/annotation.json"
+            }
+          ]
+        },
+        {
+          "id": 1,
+          "key": "inference_ccm_mesh",
+          "label": "Inference CCM + Mesh",
+          "ready": true,
+          "summary": "5 object(s) with CCM and mesh outputs",
+          "files": [
+            {
+              "name": "CCM/rgb_ccm_cropped.png",
+              "url": "data/static-demo-cases/003_home_office/CCM/rgb_ccm_cropped.png"
+            },
+            {
+              "name": "CCM/canonical_coord_map_restored.png",
+              "url": "data/static-demo-cases/003_home_office/CCM/canonical_coord_map_restored.png"
+            },
+            {
+              "name": "CCM/canonical_pcd_000_overlay.ply",
+              "url": "data/static-demo-cases/003_home_office/CCM/canonical_pcd_000_overlay.ply"
+            },
+            {
+              "name": "CCM/canonical_pcd_001_overlay.ply",
+              "url": "data/static-demo-cases/003_home_office/CCM/canonical_pcd_001_overlay.ply"
+            },
+            {
+              "name": "CCM/canonical_pcd_002_overlay.ply",
+              "url": "data/static-demo-cases/003_home_office/CCM/canonical_pcd_002_overlay.ply"
+            },
+            {
+              "name": "CCM/canonical_pcd_003_overlay.ply",
+              "url": "data/static-demo-cases/003_home_office/CCM/canonical_pcd_003_overlay.ply"
+            },
+            {
+              "name": "CCM/canonical_pcd_004_overlay.ply",
+              "url": "data/static-demo-cases/003_home_office/CCM/canonical_pcd_004_overlay.ply"
+            },
+            {
+              "name": "mesh/000.glb",
+              "url": "data/static-demo-cases/003_home_office/mesh/000.glb"
+            },
+            {
+              "name": "mesh/001.glb",
+              "url": "data/static-demo-cases/003_home_office/mesh/001.glb"
+            },
+            {
+              "name": "mesh/002.glb",
+              "url": "data/static-demo-cases/003_home_office/mesh/002.glb"
+            },
+            {
+              "name": "mesh/003.glb",
+              "url": "data/static-demo-cases/003_home_office/mesh/003.glb"
+            },
+            {
+              "name": "mesh/004.glb",
+              "url": "data/static-demo-cases/003_home_office/mesh/004.glb"
+            }
+          ],
+          "items": [
+            {
+              "index": 0,
+              "label": "floor lamp",
+              "rgb_url": "data/static-demo-cases/003_home_office/input/scene.png",
+              "mask_url": "data/static-demo-cases/003_home_office/review/mask_000.png",
+              "ccm_url": "data/static-demo-cases/003_home_office/CCM/canonical_coord_map_restored.png",
+              "cropped_url": "data/static-demo-cases/003_home_office/CCM/rgb_ccm_cropped.png",
+              "overlay_url": "data/static-demo-cases/003_home_office/CCM/canonical_pcd_000_overlay.ply",
+              "mesh_url": "data/static-demo-cases/003_home_office/mesh/000.glb",
+              "cropped_size": {
+                "width": 518,
+                "height": 518
+              },
+              "cropped_crops": {
+                "rgb": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 518,
+                  "height": 518
+                },
+                "mask": {
+                  "x": 518,
+                  "y": 0,
+                  "width": 518,
+                  "height": 518
+                },
+                "ccm": {
+                  "x": 1036,
+                  "y": 0,
+                  "width": 518,
+                  "height": 518
+                }
+              }
+            },
+            {
+              "index": 1,
+              "label": "bookshelf",
+              "rgb_url": "data/static-demo-cases/003_home_office/input/scene.png",
+              "mask_url": "data/static-demo-cases/003_home_office/review/mask_001.png",
+              "ccm_url": "data/static-demo-cases/003_home_office/CCM/canonical_coord_map_restored.png",
+              "cropped_url": "data/static-demo-cases/003_home_office/CCM/rgb_ccm_cropped.png",
+              "overlay_url": "data/static-demo-cases/003_home_office/CCM/canonical_pcd_001_overlay.ply",
+              "mesh_url": "data/static-demo-cases/003_home_office/mesh/001.glb",
+              "cropped_size": {
+                "width": 518,
+                "height": 518
+              },
+              "cropped_crops": {
+                "rgb": {
+                  "x": 0,
+                  "y": 518,
+                  "width": 518,
+                  "height": 518
+                },
+                "mask": {
+                  "x": 518,
+                  "y": 518,
+                  "width": 518,
+                  "height": 518
+                },
+                "ccm": {
+                  "x": 1036,
+                  "y": 518,
+                  "width": 518,
+                  "height": 518
+                }
+              }
+            },
+            {
+              "index": 2,
+              "label": "desk",
+              "rgb_url": "data/static-demo-cases/003_home_office/input/scene.png",
+              "mask_url": "data/static-demo-cases/003_home_office/review/mask_002.png",
+              "ccm_url": "data/static-demo-cases/003_home_office/CCM/canonical_coord_map_restored.png",
+              "cropped_url": "data/static-demo-cases/003_home_office/CCM/rgb_ccm_cropped.png",
+              "overlay_url": "data/static-demo-cases/003_home_office/CCM/canonical_pcd_002_overlay.ply",
+              "mesh_url": "data/static-demo-cases/003_home_office/mesh/002.glb",
+              "cropped_size": {
+                "width": 518,
+                "height": 518
+              },
+              "cropped_crops": {
+                "rgb": {
+                  "x": 0,
+                  "y": 1036,
+                  "width": 518,
+                  "height": 518
+                },
+                "mask": {
+                  "x": 518,
+                  "y": 1036,
+                  "width": 518,
+                  "height": 518
+                },
+                "ccm": {
+                  "x": 1036,
+                  "y": 1036,
+                  "width": 518,
+                  "height": 518
+                }
+              }
+            },
+            {
+              "index": 3,
+              "label": "office chair",
+              "rgb_url": "data/static-demo-cases/003_home_office/input/scene.png",
+              "mask_url": "data/static-demo-cases/003_home_office/review/mask_003.png",
+              "ccm_url": "data/static-demo-cases/003_home_office/CCM/canonical_coord_map_restored.png",
+              "cropped_url": "data/static-demo-cases/003_home_office/CCM/rgb_ccm_cropped.png",
+              "overlay_url": "data/static-demo-cases/003_home_office/CCM/canonical_pcd_003_overlay.ply",
+              "mesh_url": "data/static-demo-cases/003_home_office/mesh/003.glb",
+              "cropped_size": {
+                "width": 518,
+                "height": 518
+              },
+              "cropped_crops": {
+                "rgb": {
+                  "x": 0,
+                  "y": 1554,
+                  "width": 518,
+                  "height": 518
+                },
+                "mask": {
+                  "x": 518,
+                  "y": 1554,
+                  "width": 518,
+                  "height": 518
+                },
+                "ccm": {
+                  "x": 1036,
+                  "y": 1554,
+                  "width": 518,
+                  "height": 518
+                }
+              }
+            },
+            {
+              "index": 4,
+              "label": "cabinet",
+              "rgb_url": "data/static-demo-cases/003_home_office/input/scene.png",
+              "mask_url": "data/static-demo-cases/003_home_office/review/mask_004.png",
+              "ccm_url": "data/static-demo-cases/003_home_office/CCM/canonical_coord_map_restored.png",
+              "cropped_url": "data/static-demo-cases/003_home_office/CCM/rgb_ccm_cropped.png",
+              "overlay_url": "data/static-demo-cases/003_home_office/CCM/canonical_pcd_004_overlay.ply",
+              "mesh_url": "data/static-demo-cases/003_home_office/mesh/004.glb",
+              "cropped_size": {
+                "width": 518,
+                "height": 518
+              },
+              "cropped_crops": {
+                "rgb": {
+                  "x": 0,
+                  "y": 2072,
+                  "width": 518,
+                  "height": 518
+                },
+                "mask": {
+                  "x": 518,
+                  "y": 2072,
+                  "width": 518,
+                  "height": 518
+                },
+                "ccm": {
+                  "x": 1036,
+                  "y": 2072,
+                  "width": 518,
+                  "height": 518
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "key": "construct_scene",
+          "label": "Construct Scene",
+          "ready": true,
+          "summary": "Constructed scene, scene graph, and environment are available",
+          "files": [
+            {
+              "name": "scene/ppd_depth/scene_with_floor.glb",
+              "url": "data/static-demo-cases/003_home_office/scene/scene_with_floor.glb"
+            }
+          ],
+          "methods": [
+            {
+              "method": "ppd_depth",
+              "scene_url": null,
+              "scene_with_floor_url": "data/static-demo-cases/003_home_office/scene/scene_with_floor.glb",
+              "projection_url": "data/static-demo-cases/003_home_office/scene/proj.png"
+            }
+          ]
+        }
+      ],
+      "capabilities": {
+        "auto_segment": false,
+        "sam3_prompt": false,
+        "pipeline": false
+      }
+    },
+    {
+      "case_id": "Gemini_Generated_Image_dfwzixdfwzixdfwz",
+      "label": "Gemini Generated Image dfwzixdfwzixdfwz",
+      "input_image": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/input/scene.png",
+      "annotation_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/review/annotation.json",
+      "masks": [
+        {
+          "id": "object_000",
+          "name": "wooden crate",
+          "url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/review/mask_000.png",
+          "mask_file": "mask_000.png"
+        },
+        {
+          "id": "object_001",
+          "name": "retro-futuristic robot",
+          "url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/review/mask_001.png",
+          "mask_file": "mask_001.png"
+        },
+        {
+          "id": "object_002",
+          "name": "off-road vehicle",
+          "url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/review/mask_002.png",
+          "mask_file": "mask_002.png"
+        },
+        {
+          "id": "object_003",
+          "name": "stone obelisk",
+          "url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/review/mask_003.png",
+          "mask_file": "mask_003.png"
+        },
+        {
+          "id": "object_004",
+          "name": "stacked wooden crates",
+          "url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/review/mask_004.png",
+          "mask_file": "mask_004.png"
+        },
+        {
+          "id": "object_005",
+          "name": "wooden crate",
+          "url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/review/mask_005.png",
+          "mask_file": "mask_005.png"
+        },
+        {
+          "id": "object_006",
+          "name": "rolled leather bundle",
+          "url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/review/mask_006.png",
+          "mask_file": "mask_006.png"
+        },
+        {
+          "id": "object_007",
+          "name": "tent support pole",
+          "url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/review/mask_007.png",
+          "mask_file": "mask_007.png"
+        }
+      ],
+      "scene_methods": [
+        {
+          "method": "ppd_depth",
+          "scene_url": null,
+          "scene_with_floor_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/scene/scene_with_floor.glb",
+          "projection_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/scene/proj.png"
+        }
+      ],
+      "environment_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/environment/environment_equirect.png",
+      "scene_graph_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/scene_graph.json",
+      "review": {
+        "revision": 0,
+        "has_current": true
+      },
+      "stages": [
+        {
+          "id": 0,
+          "key": "segmentation",
+          "label": "Segmentation",
+          "ready": true,
+          "summary": "8 masks",
+          "files": [
+            {
+              "name": "review/annotation.json",
+              "url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/review/annotation.json"
+            }
+          ]
+        },
+        {
+          "id": 1,
+          "key": "inference_ccm_mesh",
+          "label": "Inference CCM + Mesh",
+          "ready": true,
+          "summary": "8 object(s) with CCM and mesh outputs",
+          "files": [
+            {
+              "name": "CCM/rgb_ccm_cropped.png",
+              "url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/CCM/rgb_ccm_cropped.png"
+            },
+            {
+              "name": "CCM/canonical_coord_map_restored.png",
+              "url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/CCM/canonical_coord_map_restored.png"
+            },
+            {
+              "name": "CCM/canonical_pcd_000_overlay.ply",
+              "url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/CCM/canonical_pcd_000_overlay.ply"
+            },
+            {
+              "name": "CCM/canonical_pcd_001_overlay.ply",
+              "url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/CCM/canonical_pcd_001_overlay.ply"
+            },
+            {
+              "name": "CCM/canonical_pcd_002_overlay.ply",
+              "url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/CCM/canonical_pcd_002_overlay.ply"
+            },
+            {
+              "name": "CCM/canonical_pcd_003_overlay.ply",
+              "url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/CCM/canonical_pcd_003_overlay.ply"
+            },
+            {
+              "name": "CCM/canonical_pcd_004_overlay.ply",
+              "url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/CCM/canonical_pcd_004_overlay.ply"
+            },
+            {
+              "name": "CCM/canonical_pcd_005_overlay.ply",
+              "url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/CCM/canonical_pcd_005_overlay.ply"
+            },
+            {
+              "name": "CCM/canonical_pcd_006_overlay.ply",
+              "url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/CCM/canonical_pcd_006_overlay.ply"
+            },
+            {
+              "name": "CCM/canonical_pcd_007_overlay.ply",
+              "url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/CCM/canonical_pcd_007_overlay.ply"
+            },
+            {
+              "name": "mesh/000.glb",
+              "url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/mesh/000.glb"
+            },
+            {
+              "name": "mesh/001.glb",
+              "url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/mesh/001.glb"
+            },
+            {
+              "name": "mesh/002.glb",
+              "url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/mesh/002.glb"
+            },
+            {
+              "name": "mesh/003.glb",
+              "url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/mesh/003.glb"
+            },
+            {
+              "name": "mesh/004.glb",
+              "url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/mesh/004.glb"
+            },
+            {
+              "name": "mesh/005.glb",
+              "url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/mesh/005.glb"
+            },
+            {
+              "name": "mesh/006.glb",
+              "url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/mesh/006.glb"
+            },
+            {
+              "name": "mesh/007.glb",
+              "url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/mesh/007.glb"
+            }
+          ],
+          "items": [
+            {
+              "index": 0,
+              "label": "wooden crate",
+              "rgb_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/input/scene.png",
+              "mask_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/review/mask_000.png",
+              "ccm_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/CCM/canonical_coord_map_restored.png",
+              "cropped_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/CCM/rgb_ccm_cropped.png",
+              "overlay_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/CCM/canonical_pcd_000_overlay.ply",
+              "mesh_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/mesh/000.glb",
+              "cropped_size": {
+                "width": 518,
+                "height": 518
+              },
+              "cropped_crops": {
+                "rgb": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 518,
+                  "height": 518
+                },
+                "mask": {
+                  "x": 518,
+                  "y": 0,
+                  "width": 518,
+                  "height": 518
+                },
+                "ccm": {
+                  "x": 1036,
+                  "y": 0,
+                  "width": 518,
+                  "height": 518
+                }
+              }
+            },
+            {
+              "index": 1,
+              "label": "retro-futuristic robot",
+              "rgb_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/input/scene.png",
+              "mask_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/review/mask_001.png",
+              "ccm_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/CCM/canonical_coord_map_restored.png",
+              "cropped_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/CCM/rgb_ccm_cropped.png",
+              "overlay_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/CCM/canonical_pcd_001_overlay.ply",
+              "mesh_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/mesh/001.glb",
+              "cropped_size": {
+                "width": 518,
+                "height": 518
+              },
+              "cropped_crops": {
+                "rgb": {
+                  "x": 0,
+                  "y": 518,
+                  "width": 518,
+                  "height": 518
+                },
+                "mask": {
+                  "x": 518,
+                  "y": 518,
+                  "width": 518,
+                  "height": 518
+                },
+                "ccm": {
+                  "x": 1036,
+                  "y": 518,
+                  "width": 518,
+                  "height": 518
+                }
+              }
+            },
+            {
+              "index": 2,
+              "label": "off-road vehicle",
+              "rgb_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/input/scene.png",
+              "mask_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/review/mask_002.png",
+              "ccm_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/CCM/canonical_coord_map_restored.png",
+              "cropped_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/CCM/rgb_ccm_cropped.png",
+              "overlay_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/CCM/canonical_pcd_002_overlay.ply",
+              "mesh_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/mesh/002.glb",
+              "cropped_size": {
+                "width": 518,
+                "height": 518
+              },
+              "cropped_crops": {
+                "rgb": {
+                  "x": 0,
+                  "y": 1036,
+                  "width": 518,
+                  "height": 518
+                },
+                "mask": {
+                  "x": 518,
+                  "y": 1036,
+                  "width": 518,
+                  "height": 518
+                },
+                "ccm": {
+                  "x": 1036,
+                  "y": 1036,
+                  "width": 518,
+                  "height": 518
+                }
+              }
+            },
+            {
+              "index": 3,
+              "label": "stone obelisk",
+              "rgb_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/input/scene.png",
+              "mask_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/review/mask_003.png",
+              "ccm_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/CCM/canonical_coord_map_restored.png",
+              "cropped_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/CCM/rgb_ccm_cropped.png",
+              "overlay_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/CCM/canonical_pcd_003_overlay.ply",
+              "mesh_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/mesh/003.glb",
+              "cropped_size": {
+                "width": 518,
+                "height": 518
+              },
+              "cropped_crops": {
+                "rgb": {
+                  "x": 0,
+                  "y": 1554,
+                  "width": 518,
+                  "height": 518
+                },
+                "mask": {
+                  "x": 518,
+                  "y": 1554,
+                  "width": 518,
+                  "height": 518
+                },
+                "ccm": {
+                  "x": 1036,
+                  "y": 1554,
+                  "width": 518,
+                  "height": 518
+                }
+              }
+            },
+            {
+              "index": 4,
+              "label": "stacked wooden crates",
+              "rgb_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/input/scene.png",
+              "mask_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/review/mask_004.png",
+              "ccm_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/CCM/canonical_coord_map_restored.png",
+              "cropped_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/CCM/rgb_ccm_cropped.png",
+              "overlay_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/CCM/canonical_pcd_004_overlay.ply",
+              "mesh_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/mesh/004.glb",
+              "cropped_size": {
+                "width": 518,
+                "height": 518
+              },
+              "cropped_crops": {
+                "rgb": {
+                  "x": 0,
+                  "y": 2072,
+                  "width": 518,
+                  "height": 518
+                },
+                "mask": {
+                  "x": 518,
+                  "y": 2072,
+                  "width": 518,
+                  "height": 518
+                },
+                "ccm": {
+                  "x": 1036,
+                  "y": 2072,
+                  "width": 518,
+                  "height": 518
+                }
+              }
+            },
+            {
+              "index": 5,
+              "label": "wooden crate",
+              "rgb_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/input/scene.png",
+              "mask_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/review/mask_005.png",
+              "ccm_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/CCM/canonical_coord_map_restored.png",
+              "cropped_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/CCM/rgb_ccm_cropped.png",
+              "overlay_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/CCM/canonical_pcd_005_overlay.ply",
+              "mesh_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/mesh/005.glb",
+              "cropped_size": {
+                "width": 518,
+                "height": 518
+              },
+              "cropped_crops": {
+                "rgb": {
+                  "x": 0,
+                  "y": 2590,
+                  "width": 518,
+                  "height": 518
+                },
+                "mask": {
+                  "x": 518,
+                  "y": 2590,
+                  "width": 518,
+                  "height": 518
+                },
+                "ccm": {
+                  "x": 1036,
+                  "y": 2590,
+                  "width": 518,
+                  "height": 518
+                }
+              }
+            },
+            {
+              "index": 6,
+              "label": "rolled leather bundle",
+              "rgb_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/input/scene.png",
+              "mask_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/review/mask_006.png",
+              "ccm_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/CCM/canonical_coord_map_restored.png",
+              "cropped_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/CCM/rgb_ccm_cropped.png",
+              "overlay_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/CCM/canonical_pcd_006_overlay.ply",
+              "mesh_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/mesh/006.glb",
+              "cropped_size": {
+                "width": 518,
+                "height": 518
+              },
+              "cropped_crops": {
+                "rgb": {
+                  "x": 0,
+                  "y": 3108,
+                  "width": 518,
+                  "height": 518
+                },
+                "mask": {
+                  "x": 518,
+                  "y": 3108,
+                  "width": 518,
+                  "height": 518
+                },
+                "ccm": {
+                  "x": 1036,
+                  "y": 3108,
+                  "width": 518,
+                  "height": 518
+                }
+              }
+            },
+            {
+              "index": 7,
+              "label": "tent support pole",
+              "rgb_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/input/scene.png",
+              "mask_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/review/mask_007.png",
+              "ccm_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/CCM/canonical_coord_map_restored.png",
+              "cropped_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/CCM/rgb_ccm_cropped.png",
+              "overlay_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/CCM/canonical_pcd_007_overlay.ply",
+              "mesh_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/mesh/007.glb",
+              "cropped_size": {
+                "width": 518,
+                "height": 518
+              },
+              "cropped_crops": {
+                "rgb": {
+                  "x": 0,
+                  "y": 3626,
+                  "width": 518,
+                  "height": 518
+                },
+                "mask": {
+                  "x": 518,
+                  "y": 3626,
+                  "width": 518,
+                  "height": 518
+                },
+                "ccm": {
+                  "x": 1036,
+                  "y": 3626,
+                  "width": 518,
+                  "height": 518
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "key": "construct_scene",
+          "label": "Construct Scene",
+          "ready": true,
+          "summary": "Constructed scene, scene graph, and environment are available",
+          "files": [
+            {
+              "name": "scene/ppd_depth/scene_with_floor.glb",
+              "url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/scene/scene_with_floor.glb"
+            }
+          ],
+          "methods": [
+            {
+              "method": "ppd_depth",
+              "scene_url": null,
+              "scene_with_floor_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/scene/scene_with_floor.glb",
+              "projection_url": "data/static-demo-cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/scene/proj.png"
+            }
+          ]
+        }
+      ],
+      "capabilities": {
+        "auto_segment": false,
+        "sam3_prompt": false,
+        "pipeline": false
+      }
+    }
+  ]
+}

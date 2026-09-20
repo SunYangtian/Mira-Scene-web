@@ -1,0 +1,47 @@
+{
+  "schema_version": "mira-demo-review-v1",
+  "case_id": "012_hotel_lobby",
+  "revision": 0,
+  "image": {
+    "width": 518,
+    "height": 518
+  },
+  "objects": [
+    {
+      "id": "object_000",
+      "name": "ottoman",
+      "mask_file": "mask_000.png",
+      "source": "input"
+    },
+    {
+      "id": "object_001",
+      "name": "coffee table",
+      "mask_file": "mask_001.png",
+      "source": "input"
+    },
+    {
+      "id": "object_002",
+      "name": "sectional sofa",
+      "mask_file": "mask_002.png",
+      "source": "input"
+    },
+    {
+      "id": "object_003",
+      "name": "armchair",
+      "mask_file": "mask_003.png",
+      "source": "input"
+    },
+    {
+      "id": "object_004",
+      "name": "armchair",
+      "mask_file": "mask_004.png",
+      "source": "input"
+    },
+    {
+      "id": "object_005",
+      "name": "potted plant",
+      "mask_file": "mask_005.png",
+      "source": "input"
+    }
+  ]
+}

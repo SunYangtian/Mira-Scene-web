@@ -1,0 +1,26 @@
+.static-readonly .brand small::after { content: " · static read-only preview"; color: var(--accent); }
+.static-readonly .tool-group,
+.static-readonly .history-controls,
+.static-readonly #brush-size-control,
+.static-readonly #clear-prompts,
+.static-readonly .source-section,
+.static-readonly .crop-option,
+.static-readonly .source-section > .hint,
+.static-readonly .auto-segment-panel,
+.static-readonly .mask-add,
+.static-readonly #add-object-panel,
+.static-readonly .sam-panel,
+.static-readonly .save-panel,
+.static-readonly .object-actions,
+.static-readonly #scene-graph-editor,
+.static-readonly #reset-scene-graph,
+.static-readonly #save-scene-graph { display: none !important; }
+.static-readonly .object-name { pointer-events: none; }
+.static-readonly .canvas-toolbar { justify-content: flex-end; }
+.static-readonly .scene-graph-card .graph-heading-actions > span::after { content: " · read only"; color: var(--accent); }
+.static-readonly .object-panel { padding-bottom: 1rem; }
+.static-readonly .object-panel::after {
+  content: "Static preview: precomputed outputs only. Upload, editing, inference and saving require the server demo.";
+  display: block; margin: 1rem; padding: .8rem; border: 1px solid #46502d; border-radius: 8px;
+  background: #171c14; color: #aeb88d; font-size: 10px; line-height: 1.55;
+}

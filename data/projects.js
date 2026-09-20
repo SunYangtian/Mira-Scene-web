@@ -1,0 +1,50 @@
+window.SITE_DATA = {
+  site: { team: "Mira-Scene", teamShort: "Mira-Scene", tagline: "Pixel-Aligned Layouts for Generative 3D Scene", logo: "assets/favicon.svg", links: [], footer: { note: "Mira-Scene project page.", credit: "", contact: "mailto:sunyangtian98@gmail.com" } },
+  home: { title: "Mira-Scene", intro: "Pixel-aligned layouts for generative 3D scene reconstruction." },
+  nav: [{ key: "research", label: "Project", title: "Mira-Scene", intro: "" }],
+  projects: [{
+    id: "mira-scene",
+    title: "Mira-Scene: Pixel-Aligned Layouts for Generative 3D Scene",
+    short: "Mira-Scene",
+    subtitle: "Recovering dense canonical-to-scene correspondences for coherent, compositional 3D scene reconstruction from a single image.",
+    date: "2026", thumb: "assets/teaser.jpg",
+    keywords: ["3D scene reconstruction", "canonical coordinate map", "generative 3D", "layout"],
+    authors: [
+      { name: "Yang-Tian Sun", email: "sunyangtian98@gmail.com", affil: [1], note: "*" }, { name: "Tianjia Liu", email: "u3572937@connect.hku.hk", affil: [1], note: "*" },
+      { name: "Zehuan Huang", email: "huanngzh@gmail.com", affil: [2], note: "†" }, { name: "Yi-Hua Huang", email: "huangyihua16@mails.ucas.ac.cn", affil: [1] },
+      { name: "Xiaoyang Lyu", email: "shawlyu@connect.hku.hk", affil: [1] }, { name: "Ziyi Yang", email: "14ziyiyang@gmail.com", affil: [1] },
+      { name: "Zi-Xin Zou", email: "zouzx1997@gmail.com", affil: [2] }, { name: "Yuan-Chen Guo", email: "imbennyguo@gmail.com", affil: [2] },
+      { name: "Yan-Pei Cao", email: "caoyanpei@gmail.com", affil: [2], note: "✉" }, { name: "Xiaojuan Qi", email: "xjqi@eee.hku.hk", affil: [1], note: "✉" },
+    ],
+    affiliations: ["The University of Hong Kong", "VAST"],
+    authorNotes: "* Equal Contribution   † Project Lead   ✉ Corresponding Authors",
+    links: [
+      { label: "Code", href: "https://github.com/VAST-AI-Research/Mira-Scene", icon: "github" },
+      { label: "Checkpoint", href: "https://huggingface.co/Yang-Tian/Mira-Scene", icon: "hf" },
+      { label: "Dataset", href: "https://huggingface.co/datasets/Yang-Tian/Mira-Scene-Dataset", icon: "data" },
+    ],
+    teaser: { src: "assets/demo.mp4", poster: "assets/teaser.jpg", caption: "Mira-Scene reconstructs a coherent 3D scene by jointly predicting object geometry and pixel-aligned canonical correspondences." },
+    abstract: "<p>Single-image 3D object generation can now produce high-fidelity assets, yet accurately placing them into a coherent scene layout remains an open challenge. A central difficulty lies in how object layout is represented. Holistic methods absorb placement into a scene-level generation process, sacrificing object-level detail. Compositional methods preserve object fidelity by decoupling geometry from layout, but typically parameterize layout as sparse, unbounded pose variables that are difficult to learn and generalize poorly under scarce scene-level supervision.We present <strong>Mira-Scene</strong>, a compositional 3D scene reconstruction framework that replaces sparse pose regression with dense, bounded correspondence recovery. At its core is the <strong>Canonical Coordinate Map (CCM)</strong>, a pixel-aligned field that maps each visible object pixel to a surface coordinate in the object's bounded canonical space. When paired with a scene-space <strong>Point Cloud Map (PCM)</strong> from monocular geometry estimation, CCM induces dense canonical-to-scene correspondences from which object transformations are recovered through robust geometric alignment. Because CCM operates in bounded canonical space, it provides a stable prediction target that can be trained from scalable object-level 3D data without requiring scene-level layout annotations. Mira-Scene further introduces a multimodal diffusion transformer that jointly generates object geometry and CCMs, using modality-specific expert streams with shared attention and positional encoding to promote geometry-layout consistency. Experiments on indoor, outdoor, synthetic, and in-the-wild scenes show that Mira-Scene substantially outperforms strong baselines in layout accuracy, achieving relative gains of 39.8% in 3D-IoU and 16.5% in 2D-IoU over SAM3D, using limited open-source training data.</p>",
+    sections: [
+      { type: "figure", id: "motivation", title: "Why Pixel-Aligned Layouts?", body: "<p>Scene layout is difficult to learn from sparse, unbounded pose variables. Mira-Scene instead predicts a <strong>Canonical Coordinate Map (CCM)</strong>: every visible object pixel maps to a bounded coordinate on the object’s canonical surface. Combining CCM with monocular scene-space geometry produces dense correspondences for robust object-to-scene alignment.</p>", src: "assets/layout_representation.png", alt: "Comparison of scene layout representations", figureClass: "figure--compact", caption: "<strong>From sparse poses to dense correspondences.</strong> CCM provides a bounded, pixel-aligned layout representation that can be supervised with scalable object-level 3D data." },
+      { type: "figure", id: "pipeline", title: "Mira-Scene Pipeline", src: "assets/pipeline.gif", alt: "Mira-Scene pipeline", caption: "<strong>Mira-Scene.</strong> A multimodal diffusion transformer jointly predicts object geometry and CCMs. Geometric alignment between canonical coordinates and a scene-space point cloud recovers coherent object transformations." },
+      { type: "staticGallery", id: "interactive-results", title: "Interactive Scene Results", body: "Due to static hosting space limits, only the first four examples include complete intermediate results such as CCM." },
+      { type: "astraGallery", id: "astra-results", title: "Mira-Scene with GPT6 Astra-Build Background", body: "A comparison of immersive scenes built from scratch by GPT-6 Astra and by Mira-Scene. Mira-Scene delivers stronger image consistency." },
+      { type: "simulationGallery", id: "simulation", title: "From Scene Generation to Simulation", body: "<p>Mira-Scene scenes can be imported into simulation engines for downstream interactive tasks.</p>", galleries: [
+        { title: "Blender Simulation", items: [
+          { title: "Gravity", src: "data/simulation/blender/sim1.mp4", body: "Gravity influences the reconstructed scene and its objects." },
+          { title: "Scene Editing", src: "data/simulation/blender/sim2.mp4", body: "Scene editing enables objects to be reorganized into a new layout." },
+          { title: "Pick and Place", src: "data/simulation/blender/sim3.mp4", body: "A pick-and-place task manipulates objects in the reconstructed scene." },
+          { title: "Collision", src: "data/simulation/blender/sim4.mp4", body: "Collision interactions are simulated between objects and the scene." },
+        ] },
+        { title: "Isaac Simulation", note: "All action policies are generated by GPT-6 Astra.", items: [
+          { title: "Chair Alignment", src: "data/simulation/isaac/interaction1.mp4", body: "The robot straightens a tilted chair and aligns it parallel to the table." },
+          { title: "Chair Pull-Out", src: "data/simulation/isaac/interaction2.mp4", body: "The robot pulls a dining chair away from the table to make it accessible for sitting." },
+          { title: "Side-Table Stacking", src: "data/simulation/isaac/interaction3.mp4", body: "The robot organizes unused furniture by stacking a side table on top of an ottoman." },
+        ] },
+      ] },
+    ],
+    bibtex: "@article{sun2026mira,\n  title={Mira-Scene: Pixel-Aligned Layouts for Generative 3D Scene},\n  author={Sun, Yang-Tian and Liu, Tianjia and Huang, Zehuan and others},\n  year={2026}\n}",
+  }],
+  posts: [],
+};

@@ -1,0 +1,59 @@
+{
+  "schema_version": "mira-demo-review-v1",
+  "case_id": "Gemini_Generated_Image_dfwzixdfwzixdfwz",
+  "revision": 0,
+  "image": {
+    "width": 518,
+    "height": 518
+  },
+  "objects": [
+    {
+      "id": "object_000",
+      "name": "wooden crate",
+      "mask_file": "mask_000.png",
+      "source": "input"
+    },
+    {
+      "id": "object_001",
+      "name": "retro-futuristic robot",
+      "mask_file": "mask_001.png",
+      "source": "input"
+    },
+    {
+      "id": "object_002",
+      "name": "off-road vehicle",
+      "mask_file": "mask_002.png",
+      "source": "input"
+    },
+    {
+      "id": "object_003",
+      "name": "stone obelisk",
+      "mask_file": "mask_003.png",
+      "source": "input"
+    },
+    {
+      "id": "object_004",
+      "name": "stacked wooden crates",
+      "mask_file": "mask_004.png",
+      "source": "input"
+    },
+    {
+      "id": "object_005",
+      "name": "wooden crate",
+      "mask_file": "mask_005.png",
+      "source": "input"
+    },
+    {
+      "id": "object_006",
+      "name": "rolled leather bundle",
+      "mask_file": "mask_006.png",
+      "source": "input"
+    },
+    {
+      "id": "object_007",
+      "name": "tent support pole",
+      "mask_file": "mask_007.png",
+      "source": "input"
+    }
+  ]
+}

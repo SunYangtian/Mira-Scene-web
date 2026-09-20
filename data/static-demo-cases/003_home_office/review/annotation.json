@@ -1,0 +1,41 @@
+{
+  "schema_version": "mira-demo-review-v1",
+  "case_id": "003_home_office",
+  "revision": 0,
+  "image": {
+    "width": 518,
+    "height": 518
+  },
+  "objects": [
+    {
+      "id": "object_000",
+      "name": "floor lamp",
+      "mask_file": "mask_000.png",
+      "source": "input"
+    },
+    {
+      "id": "object_001",
+      "name": "bookshelf",
+      "mask_file": "mask_001.png",
+      "source": "input"
+    },
+    {
+      "id": "object_002",
+      "name": "desk",
+      "mask_file": "mask_002.png",
+      "source": "input"
+    },
+    {
+      "id": "object_003",
+      "name": "office chair",
+      "mask_file": "mask_003.png",
+      "source": "input"
+    },
+    {
+      "id": "object_004",
+      "name": "cabinet",
+      "mask_file": "mask_004.png",
+      "source": "input"
+    }
+  ]
+}

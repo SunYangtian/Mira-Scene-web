@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mira-Scene · Static Interactive Pipeline</title>
+  <link rel="stylesheet" href="css/demo.css?v=20260914-21">
+  <link rel="stylesheet" href="css/static-demo.css">
+</head>
+<body data-stage="0" class="static-readonly">
+  <header class="topbar">
+    <div class="brand"><div class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></div><div><strong>Mira-Scene · Static Interactive Pipeline</strong><small>Segmentation · Reconstruction · Scene building</small></div></div>
+    <ol class="workflow-steps pipeline-three" id="pipeline" aria-label="Mira-Scene three-stage pipeline"></ol>
+    <div class="demo-links"><a class="project-page-link" href="index.html" aria-label="Open project page">Project Page</a></div>
+    <div class="system-state"><span class="state-dot ready" id="stateDot"></span><span id="systemState">Ready</span></div>
+  </header>
+  <main class="workspace">
+    <aside class="panel source-panel">
+      <section class="source-section">
+        <input id="case-upload" type="file" accept="image/png,image/jpeg,image/webp,image/bmp,.png,.jpg,.jpeg,.webp,.bmp">
+        <div class="upload-picker"><div class="upload-drop upload-disabled" id="case-upload-btn" role="button" tabindex="0" aria-disabled="true"><strong>Drop an image here <em>暂不支持</em></strong><span>请先使用下面的预处理结果</span></div></div>
+        <label class="crop-option" for="crop-square"><input id="crop-square" type="checkbox"><span class="crop-toggle" aria-hidden="true"><i></i></span><span class="crop-copy"><strong>Crop to square</strong><small>Centered crop for new cases</small></span></label>
+        <p class="hint">Existing masks load from <code>review/</code> first, then <code>input/</code>.</p>
+      </section>
+      <section class="recent-section">
+        <div class="section-heading"><span class="eyebrow">01 · PREPROCESSED CASES</span><span class="count" id="case-count">0</span></div>
+        <div id="scene-thumbnails" class="job-list case-list" role="listbox" aria-label="Cases"></div>
+      </section>
+    </aside>
+    <section class="canvas-column">
+      <div class="canvas-toolbar" id="canvas-toolbar">
+        <div class="tool-group" role="group" aria-label="Editing tools">
+          <button class="tool active" data-tool="select">Select</button><button class="tool" data-tool="positive"><span class="plus-dot"></span> Positive</button><button class="tool" data-tool="negative"><span class="minus-dot"></span> Negative</button><button class="tool" data-tool="box">Box</button><button class="tool" data-tool="brush">Brush</button><button class="tool" data-tool="erase">Erase</button>
+        </div>
+        <div class="history-controls"><button class="history-button" id="undo-paint" type="button" disabled>Undo</button><button class="history-button" id="redo-paint" type="button" disabled>Redo</button></div>
+        <label class="brush-size-control" id="brush-size-control" hidden><span>Brush Size</span><input id="brush-size" type="range" min="4" max="96" step="2" value="24"><output id="brush-size-value">24 px</output></label>
+        <div class="toolbar-tail"><label class="range-label">Overlay <input id="opacity" type="range" min="0" max="100" value="58"></label><button class="secondary" id="clear-prompts" type="button">Reset Edit</button></div>
+      </div>
+      <div class="stage-wrap" id="stageWrap">
+        <div class="empty-stage" id="emptyStage"><div class="empty-orbit"><span></span></div><h1>Turn a scene into editable objects</h1><p>Select a case, then refine its masks with SAM3 points, boxes, or brush tools.</p></div>
+        <div class="segmentation-workspace" id="segmentation-workspace" style="grid-template-columns:minmax(0,1fr)">
+          <section class="segmentation-pane preview-pane" aria-label="Interactive segmentation preview">
+            <div class="segmentation-pane-heading"><strong>Preview</strong><span>RGB + object overlays</span></div>
+            <div class="segmentation-canvas-surface">
+              <canvas id="sceneCanvas"></canvas>
+              <div class="paint-cursor" id="paint-cursor" hidden></div>
+            </div>
+          </section>
+          <section class="segmentation-pane selected-mask-pane" aria-label="Selected object mask" aria-hidden="true" hidden style="display:none">
+            <div class="segmentation-pane-heading"><strong>Selected Mask</strong><span id="selected-mask-name">No mask selected</span></div>
+            <div class="segmentation-mask-surface">
+              <canvas id="selectedMaskCanvas" aria-label="Black and white selected mask preview"></canvas>
+              <div class="selected-mask-cursor" id="selected-mask-cursor" hidden aria-hidden="true"></div>
+              <div class="selected-mask-empty" id="selected-mask-empty">Select an object mask to preview it here.</div>
+            </div>
+          </section>
+        </div>
+        <div id="result-stage" class="result-stage hidden"></div>
+        <div class="run-overlay hidden" id="runOverlay"><div class="spinner"></div><strong>Running segmentation</strong><span>Please keep this page open…</span></div>
+      </div>
+      <div class="statusbar"><span id="canvasMeta">No scene loaded</span><div class="zoom-controls"><button id="zoom-out" type="button">−</button><button id="reset-zoom" type="button">100%</button><button id="zoom-in" type="button">＋</button></div><span id="stageMeta">Stage 0 · Segmentation</span><span id="cursorMeta">x — · y —</span></div>
+    </section>
+    <aside class="panel object-panel">
+      <section class="auto-segment-panel">
+        <button class="primary wide" id="auto-segment" type="button" disabled><span class="button-icon">✦</span>Auto-Segment Image</button>
+        <p class="hint">Run automatic segmentation for the current input image.</p>
+      </section>
+      <section class="objects-section">
+        <div class="section-heading"><span class="eyebrow">02 · OBJECT MASKS</span><div class="object-heading-actions"><span class="count" id="object-count">0</span><button class="mask-add" id="toggle-add-object" type="button" aria-expanded="false">＋ Add object</button></div></div>
+        <div class="add-object-panel" id="add-object-panel" hidden><label for="text-prompt">Add by text</label><div class="prompt-row"><input id="text-prompt" type="text" placeholder="e.g. wooden chair"><button class="secondary" id="add-by-text" type="button">Add</button></div><div class="add-object-divider">or</div><button class="secondary wide" id="add-prompt-mask" type="button">＋ Add with points / box</button></div>
+        <div class="object-list" id="object-list"><div class="empty-small">Objects will appear here after segmentation</div></div>
+      </section>
+      <section class="sam-panel"><div class="section-heading"><span class="eyebrow">03 · EDIT MASK</span><span class="review-progress" id="review-progress">0 / 0 reviewed</span></div><div id="edit-controls"><div class="edit-guide"><strong id="edit-target">No mask selected</strong><span id="edit-hint">Select a mask, then refine it with SAM3 or paint tools.</span></div><div class="prompt-summary"><span><i class="legend positive"></i><b id="positive-count">0</b> Positive</span><span><i class="legend negative"></i><b id="negative-count">0</b> Negative</span><span><i class="legend box"></i><b id="box-count">0</b> Box</span></div><div class="candidate-strip hidden" id="candidate-strip"><span><span>Candidates <b id="candidate-count">0</b></span><small id="candidate-active"></small></span><div id="candidate-buttons"></div></div><button class="primary wide mask-edit-done" id="finish-mask" type="button" disabled>Apply &amp; Next</button></div></section>
+      <section class="stage-info-panel hidden" id="stage-info-panel"><div class="section-heading"><span class="eyebrow">STAGE DETAILS</span></div><div id="stage-content" class="stage-details"></div></section>
+      <section class="save-panel"><div class="section-heading"><span class="eyebrow">04 · STAGE ACTION</span></div><div id="construct-options-panel" class="construct-options-panel" hidden><span class="eyebrow">CONSTRUCT SCENE OPTIONS</span><label><input type="checkbox" data-construct-option="estimation_depth"> Estimation Depth</label><label><input type="checkbox" data-construct-option="estimate_floor"> Estimate Floor</label><label><input type="checkbox" data-construct-option="generate_environment_map"> Generate Environment Map</label></div><button class="primary wide stage-action-button" id="run-inference-ccm" type="button" hidden>Inference CCM</button><button class="primary wide stage-action-button" id="run-inference-mesh" type="button" hidden>Inference Mesh</button><button class="primary wide stage-action-button" id="construct-scene-action" type="button" hidden>Construct Scene</button><div class="pipeline-job" id="pipeline-job" hidden><div class="pipeline-job-heading"><strong id="pipeline-job-title">Pipeline task</strong><span id="pipeline-job-percent">0%</span></div><div class="pipeline-job-track"><i id="pipeline-job-progress"></i></div><span class="pipeline-job-step" id="pipeline-job-step"></span><pre id="pipeline-job-log" aria-label="Pipeline task log"></pre><button class="secondary wide" id="cancel-pipeline-job" type="button">Cancel</button></div><button class="primary wide" id="save-review" type="button" disabled>Save Edited Masks</button><button class="secondary wide next-stage" id="next-stage" type="button" disabled>Next Stage →</button><p class="hint" id="result-summary">Select a case to begin.</p></section>
+    </aside>
+  </main>
+  <div class="toast-region" id="toasts" aria-live="polite"></div>
+  <script src="js/static-api.js"></script>
+  <script src="js/demo.js"></script>
+</body>
+</html>

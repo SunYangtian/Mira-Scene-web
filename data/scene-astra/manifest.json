@@ -1,0 +1,1793 @@
+{
+  "version": 1,
+  "source": "http://192.168.80.27:8002",
+  "cases": [
+    {
+      "id": "002_bedroom_suite",
+      "thumbnail": "cases/002_bedroom_suite/input/scene.png",
+      "from_scratch": {
+        "dataset": "scene_image",
+        "model": "cases/002_bedroom_suite/scene_image.glb",
+        "model_info": {
+          "source": "/mnt/pfs/users/lilin/scene_data/scene_comparison/data/scene_image/002_bedroom_suite/001_002_bedroom_suite_scene_image.blend",
+          "source_sha256": "18c81cabb8b9ce2512df97c0c600b4d0af6ae11c92f0477c181ee894351657c1",
+          "blender_version": "4.5.3 LTS",
+          "scene": "Scene",
+          "source_scene_meshes": 726,
+          "export_objects": 1462,
+          "export_mesh_objects": 726,
+          "cameras": [
+            {
+              "name": "CAM 01 | reference composition",
+              "position": [
+                0.3199999928474426,
+                1.649999976158142,
+                2.6500000953674316
+              ],
+              "forward": [
+                -0.02514587715268135,
+                -0.15087521076202393,
+                -0.9882330894470215
+              ],
+              "up": [
+                -0.0038378206081688404,
+                0.9885529279708862,
+                -0.1508263349533081
+              ],
+              "fov": 41.11209023703316,
+              "type": "PERSP",
+              "ortho_scale": 6.0,
+              "default": false
+            },
+            {
+              "name": "CAM 02 | complete room from entry",
+              "position": [
+                -0.9800000190734863,
+                1.8799999952316284,
+                2.619999885559082
+              ],
+              "forward": [
+                0.28199589252471924,
+                -0.1644974648952484,
+                -0.9452084302902222
+              ],
+              "up": [
+                0.04702825844287872,
+                0.9863775968551636,
+                -0.1576317548751831
+              ],
+              "fov": 57.22092063977898,
+              "type": "PERSP",
+              "ortho_scale": 6.0,
+              "default": true
+            },
+            {
+              "name": "CAM 03 | reverse view toward entrance",
+              "position": [
+                0.6499999761581421,
+                1.9800000190734863,
+                -2.569999933242798
+              ],
+              "forward": [
+                -0.22236014902591705,
+                -0.16677020490169525,
+                0.9605955481529236
+              ],
+              "up": [
+                -0.03760984539985657,
+                0.9859958291053772,
+                0.16247400641441345
+              ],
+              "fov": 55.10562129910979,
+              "type": "PERSP",
+              "ortho_scale": 6.0,
+              "default": false
+            },
+            {
+              "name": "CAM 04 | chair, window and luggage",
+              "position": [
+                2.130000114440918,
+                1.409999966621399,
+                1.8600000143051147
+              ],
+              "forward": [
+                -0.3638853430747986,
+                -0.1144474446773529,
+                -0.9243859648704529
+              ],
+              "up": [
+                -0.041921213269233704,
+                0.99342942237854,
+                -0.10649341344833374
+              ],
+              "fov": 35.938276582261864,
+              "type": "PERSP",
+              "ortho_scale": 6.0,
+              "default": false
+            }
+          ],
+          "procedural_color_approximations": [
+            "Camel wool | knitted throw",
+            "Camel wool | raised yarn",
+            "Natural linen pillow",
+            "Natural oak | furniture",
+            "Oak floor | board tone 00",
+            "Oak floor | board tone 01",
+            "Oak floor | board tone 02",
+            "Oak floor | board tone 03",
+            "Oak floor | board tone 04",
+            "Oak floor | board tone 05",
+            "Oak floor | board tone 06",
+            "Oak floor | board tone 07",
+            "Oak floor | board tone 08",
+            "Oatmeal upholstery | fine linen",
+            "Walnut | chair and bed legs",
+            "Woven jute and wool | pale sand"
+          ],
+          "material_note": "保留几何和可导出的图像纹理；程序材质使用代表色，Cycles 光照与复杂材质效果不完全等同。",
+          "bytes": 30458964,
+          "seconds": 14.82,
+          "exporter_version": 1
+        }
+      },
+      "with_mira_scene": {
+        "dataset": "demo_data",
+        "model": "cases/002_bedroom_suite/demo_data.glb",
+        "model_info": {
+          "source": "data/demo_data/002_bedroom_suite/001_002_bedroom_suite_demo_data.blend",
+          "source_sha256": "6ae7bbbe9958d5678537ca468b9f9c11cce3b4bcdfc28b08979068be512eacd2",
+          "blender_version": "4.5.3 LTS",
+          "scene": "BEDROOM | Complete interior",
+          "source_scene_meshes": 326,
+          "export_objects": 759,
+          "export_mesh_objects": 320,
+          "cameras": [
+            {
+              "name": "01 | Reference composition",
+              "position": [
+                0.2199999988079071,
+                1.3600000143051147,
+                1.9800000190734863
+              ],
+              "forward": [
+                -0.030736800283193588,
+                -0.20901021361351013,
+                -0.9774302840232849
+              ],
+              "up": [
+                -0.006569398567080498,
+                0.977913498878479,
+                -0.20890694856643677
+              ],
+              "fov": 42.322519286269895,
+              "type": "PERSP",
+              "ortho_scale": 6.0,
+              "default": true
+            },
+            {
+              "name": "02 | Complete bedroom",
+              "position": [
+                -1.5499999523162842,
+                1.6200000047683716,
+                1.6799999475479126
+              ],
+              "forward": [
+                0.551445484161377,
+                -0.1759929060935974,
+                -0.8154351711273193
+              ],
+              "up": [
+                0.09858933836221695,
+                0.9843915104866028,
+                -0.145786315202713
+              ],
+              "fov": 55.10562129910979,
+              "type": "PERSP",
+              "ortho_scale": 6.0,
+              "default": false
+            },
+            {
+              "name": "03 | Entrance and wardrobe",
+              "position": [
+                0.30000001192092896,
+                1.7400000095367432,
+                -2.0999999046325684
+              ],
+              "forward": [
+                -0.18627691268920898,
+                -0.12609513103961945,
+                0.974372148513794
+              ],
+              "up": [
+                -0.02367771416902542,
+                0.9920182228088379,
+                0.12385213375091553
+              ],
+              "fov": 51.28200968475036,
+              "type": "PERSP",
+              "ortho_scale": 6.0,
+              "default": false
+            },
+            {
+              "name": "04 | Window and reading corner",
+              "position": [
+                -0.18000000715255737,
+                1.6799999475479126,
+                0.41999998688697815
+              ],
+              "forward": [
+                0.6123470067977905,
+                -0.1306338906288147,
+                -0.779721736907959
+              ],
+              "up": [
+                0.08068481087684631,
+                0.9914306998252869,
+                -0.10273844003677368
+              ],
+              "fov": 31.89079185747693,
+              "type": "PERSP",
+              "ortho_scale": 6.0,
+              "default": false
+            },
+            {
+              "name": "05 | Axonometric inspection",
+              "position": [
+                -6.599999904632568,
+                8.5,
+                8.0
+              ],
+              "forward": [
+                0.503543496131897,
+                -0.587143063545227,
+                -0.6338036060333252
+              ],
+              "up": [
+                0.3652355670928955,
+                0.8094831705093384,
+                -0.4597172737121582
+              ],
+              "fov": 29.862836975913858,
+              "type": "ORTHO",
+              "ortho_scale": 6.849999904632568,
+              "default": false
+            },
+            {
+              "name": "06 | Plan inspection",
+              "position": [
+                -0.125,
+                9.0,
+                -0.15000000596046448
+              ],
+              "forward": [
+                0.0,
+                -1.0,
+                -0.0
+              ],
+              "up": [
+                0.0,
+                0.0,
+                -1.0
+              ],
+              "fov": 29.862836975913858,
+              "type": "ORTHO",
+              "ortho_scale": 5.400000095367432,
+              "default": false
+            }
+          ],
+          "procedural_color_approximations": [
+            "OAK / board tone 00",
+            "OAK / board tone 01",
+            "OAK / board tone 02",
+            "OAK / board tone 03",
+            "OAK / board tone 04",
+            "OAK / board tone 05",
+            "OAK / board tone 06",
+            "OAK / joinery pale natural",
+            "RUG / fine oatmeal basket weave"
+          ],
+          "material_note": "保留几何和可导出的图像纹理；程序材质使用代表色，Cycles 光照与复杂材质效果不完全等同。",
+          "bytes": 26659324,
+          "seconds": 7.24,
+          "exporter_version": 1,
+          "original_export_source": "/mnt/pfs/users/lilin/scene_data/demo_data/organized_scenes/001_002_bedroom_suite.blend"
+        }
+      }
+    },
+    {
+      "id": "012_hotel_lobby",
+      "thumbnail": "cases/012_hotel_lobby/input/scene.png",
+      "from_scratch": {
+        "dataset": "scene_image",
+        "model": "cases/012_hotel_lobby/scene_image.glb",
+        "model_info": {
+          "source": "/mnt/pfs/users/lilin/scene_data/scene_comparison/data/scene_image/012_hotel_lobby/006_012_hotel_lobby_scene_image.blend",
+          "source_sha256": "9eed0b398e782cd3a3546c5362ad672ebe8d33b696745a80af764a0ee02e398a",
+          "blender_version": "4.5.3 LTS",
+          "scene": "01 | HOTEL LOBBY - complete interior",
+          "source_scene_meshes": 1673,
+          "export_objects": 2471,
+          "export_mesh_objects": 1673,
+          "cameras": [
+            {
+              "name": "01 | Reference seating view",
+              "position": [
+                0.4000000059604645,
+                1.7799999713897705,
+                3.880000114440918
+              ],
+              "forward": [
+                -0.010798508301377296,
+                -1.7881393432617188e-07,
+                -0.9999416470527649
+              ],
+              "up": [
+                -1.862645149230957e-09,
+                0.9999999403953552,
+                -1.7574802768649533e-07
+              ],
+              "fov": 51.28200968475036,
+              "type": "PERSP",
+              "ortho_scale": 6.0,
+              "default": true
+            },
+            {
+              "name": "02 | Reverse - enclosure and furniture backs",
+              "position": [
+                -3.180000066757202,
+                1.9500000476837158,
+                -1.850000023841858
+              ],
+              "forward": [
+                0.6912225484848022,
+                -1.2665987014770508e-07,
+                0.7226420640945435
+              ],
+              "up": [
+                1.4901161193847656e-07,
+                1.0,
+                2.9802322387695312e-08
+              ],
+              "fov": 53.1301017798049,
+              "type": "PERSP",
+              "ortho_scale": 6.0,
+              "default": false
+            },
+            {
+              "name": "03 | Furniture and joinery detail",
+              "position": [
+                0.699999988079071,
+                1.5399999618530273,
+                2.8399999141693115
+              ],
+              "forward": [
+                -0.40275782346725464,
+                -0.1424722969532013,
+                -0.9041501879692078
+              ],
+              "up": [
+                -0.057973213493824005,
+                0.9897986650466919,
+                -0.13014404475688934
+              ],
+              "fov": 30.510239871488103,
+              "type": "PERSP",
+              "ortho_scale": 6.0,
+              "default": false
+            },
+            {
+              "name": "04 | Complete ceiling and window architecture",
+              "position": [
+                -2.940000057220459,
+                1.7799999713897705,
+                3.3499999046325684
+              ],
+              "forward": [
+                0.5827362537384033,
+                0.13152673840522766,
+                -0.8019472360610962
+              ],
+              "up": [
+                -0.07731714844703674,
+                0.9913126826286316,
+                0.10640181601047516
+              ],
+              "fov": 55.10562129910979,
+              "type": "PERSP",
+              "ortho_scale": 6.0,
+              "default": false
+            },
+            {
+              "name": "05 | Axonometric layout",
+              "position": [
+                -8.399999618530273,
+                10.300000190734863,
+                11.5
+              ],
+              "forward": [
+                0.4974983334541321,
+                -0.5517706871032715,
+                -0.6693612337112427
+              ],
+              "up": [
+                0.32914432883262634,
+                0.8339958786964417,
+                -0.4428486227989197
+              ],
+              "fov": 37.84928837995056,
+              "type": "ORTHO",
+              "ortho_scale": 10.800000190734863,
+              "default": false
+            },
+            {
+              "name": "06 | Dimensioned footprint - top",
+              "position": [
+                -0.15000000596046448,
+                12.0,
+                0.4000000059604645
+              ],
+              "forward": [
+                0.0,
+                -1.0,
+                -0.0
+              ],
+              "up": [
+                0.0,
+                0.0,
+                -1.0
+              ],
+              "fov": 37.84928837995056,
+              "type": "ORTHO",
+              "ortho_scale": 8.449999809265137,
+              "default": false
+            }
+          ],
+          "procedural_color_approximations": [
+            "Ceramic | speckled ivory",
+            "Curtain | taupe linen pleats",
+            "Exterior | asphalt",
+            "Exterior | limestone facade",
+            "Exterior | pale pavement",
+            "Ficus | leaf green 0",
+            "Ficus | leaf green 1",
+            "Ficus | leaf green 2",
+            "Ficus | leaf green 3",
+            "Lamp | natural linen shade",
+            "Leather | honey cognac luggage",
+            "Limestone | honed tile 00",
+            "Limestone | honed tile 01",
+            "Limestone | honed tile 02",
+            "Limestone | honed tile 03",
+            "Limestone | honed tile 04",
+            "Limestone | honed tile 05",
+            "Limestone | honed tile 06",
+            "Linen | golden oatmeal cushions",
+            "Linen | pale scatter cushions",
+            "Linen | sofa warm ivory",
+            "Oak | long horizontal grain",
+            "Oak | recessed dark end grain",
+            "Oak | vertical grain",
+            "Plaster | fine warm limewash",
+            "Rug | fine oat wool weave",
+            "Rug | woven bound edge",
+            "Soil | textured earth",
+            "Tree | warm bark",
+            "Velvet | cognac rust armchair",
+            "Velvet | mushroom taupe armchair",
+            "Walnut | furniture legs",
+            "Wool | ottoman boucle"
+          ],
+          "material_note": "保留几何和可导出的图像纹理；程序材质使用代表色，Cycles 光照与复杂材质效果不完全等同。",
+          "bytes": 20235140,
+          "seconds": 18.08,
+          "exporter_version": 1
+        }
+      },
+      "with_mira_scene": {
+        "dataset": "demo_data",
+        "model": "cases/012_hotel_lobby/demo_data.glb",
+        "model_info": {
+          "source": "data/demo_data/012_hotel_lobby/006_012_hotel_lobby_demo_data.blend",
+          "source_sha256": "2ec6148f1ca56be1433a35c66b9092f72e1ec7a477a25aa3fc3dcaa0ef94fd80",
+          "blender_version": "4.5.3 LTS",
+          "scene": "01 | HOTEL LOBBY - complete enclosed scene",
+          "source_scene_meshes": 1441,
+          "export_objects": 1583,
+          "export_mesh_objects": 1441,
+          "cameras": [
+            {
+              "name": "01 | Reference composition",
+              "position": [
+                -2.1700000762939453,
+                1.5199999809265137,
+                2.1500000953674316
+              ],
+              "forward": [
+                0.6322824954986572,
+                -0.10618478059768677,
+                -0.7674267292022705
+              ],
+              "up": [
+                0.06752049922943115,
+                0.9943464398384094,
+                -0.08195232599973679
+              ],
+              "fov": 44.270981011177774,
+              "type": "PERSP",
+              "ortho_scale": 6.0,
+              "default": true
+            },
+            {
+              "name": "02 | Reverse toward entrance",
+              "position": [
+                0.550000011920929,
+                1.7899999618530273,
+                -2.1700000762939453
+              ],
+              "forward": [
+                -0.2551528811454773,
+                -0.12317702919244766,
+                0.9590227007865906
+              ],
+              "up": [
+                -0.03167023882269859,
+                0.9923847317695618,
+                0.11903604865074158
+              ],
+              "fov": 55.10562129910979,
+              "type": "PERSP",
+              "ortho_scale": 6.0,
+              "default": false
+            },
+            {
+              "name": "03 | Library and material detail",
+              "position": [
+                -1.899999976158142,
+                1.5199999809265137,
+                0.9399999976158142
+              ],
+              "forward": [
+                0.5902919769287109,
+                -5.960464477539063e-08,
+                -0.8071897625923157
+              ],
+              "up": [
+                -2.9802322387695312e-08,
+                1.0,
+                -9.313225746154785e-08
+              ],
+              "fov": 35.051134046820174,
+              "type": "PERSP",
+              "ortho_scale": 6.0,
+              "default": false
+            },
+            {
+              "name": "04 | Architectural cutaway",
+              "position": [
+                -7.699999809265137,
+                8.199999809265137,
+                9.800000190734863
+              ],
+              "forward": [
+                0.5385962724685669,
+                -0.4904457926750183,
+                -0.6851109266281128
+              ],
+              "up": [
+                0.3031105399131775,
+                0.871471643447876,
+                -0.3855659067630768
+              ],
+              "fov": 37.84928837995056,
+              "type": "ORTHO",
+              "ortho_scale": 8.649999618530273,
+              "default": false
+            }
+          ],
+          "procedural_color_approximations": [
+            "Curtain | flax linen",
+            "Entry mat | woven cocoa",
+            "Exterior | pale limestone",
+            "Lamp shade | ivory linen",
+            "Limestone | honed slab 00",
+            "Limestone | honed slab 01",
+            "Limestone | honed slab 02",
+            "Limestone | honed slab 03",
+            "Limestone | honed slab 04",
+            "Limestone | honed slab 05",
+            "Luggage | cognac leather",
+            "Luggage | sand canvas",
+            "Oak | dark endgrain and shelf backs",
+            "Oak | horizontal grain",
+            "Oak | quarter-sawn vertical grain",
+            "Rug | oatmeal wool",
+            "Rug | stitched border",
+            "Street trees | bark",
+            "Street | asphalt",
+            "Street | grey limestone",
+            "Warm ivory | fine lime plaster"
+          ],
+          "material_note": "保留几何和可导出的图像纹理；程序材质使用代表色，Cycles 光照与复杂材质效果不完全等同。",
+          "bytes": 29334224,
+          "seconds": 10.48,
+          "exporter_version": 1,
+          "original_export_source": "/mnt/pfs/users/lilin/scene_data/demo_data/organized_scenes/006_012_hotel_lobby.blend"
+        }
+      }
+    },
+    {
+      "id": "Gemini_Generated_Image_dfwzixdfwzixdfwz",
+      "thumbnail": "cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/input/scene.png",
+      "from_scratch": {
+        "dataset": "scene_image",
+        "model": "cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/scene_image.glb",
+        "model_info": {
+          "source": "/mnt/pfs/users/lilin/scene_data/scene_comparison/data/scene_image/Gemini_Generated_Image_dfwzixdfwzixdfwz/017_Gemini_Generated_Image_dfwzixdfwzixdfwz_scene_image.blend",
+          "source_sha256": "eee5e3932057dbc7fa6d47f2d02f5e024b6bc4b47e6a56700aaeec5977fc00c2",
+          "blender_version": "4.5.3 LTS",
+          "scene": "Scene",
+          "source_scene_meshes": 2315,
+          "export_objects": 3158,
+          "export_mesh_objects": 2315,
+          "cameras": [
+            {
+              "name": "01 • HERO / reference composition",
+              "position": [
+                4.0,
+                4.900000095367432,
+                15.600000381469727
+              ],
+              "forward": [
+                -0.22252726554870605,
+                -0.08141213655471802,
+                -0.9715213179588318
+              ],
+              "up": [
+                -0.018176790326833725,
+                0.9966805577278137,
+                -0.07935705780982971
+              ],
+              "fov": 25.98923349947182,
+              "type": "PERSP",
+              "ortho_scale": 6.0,
+              "default": true
+            },
+            {
+              "name": "02 • REVERSE / completed backs",
+              "position": [
+                -7.5,
+                7.5,
+                -8.800000190734863
+              ],
+              "forward": [
+                0.5917724370956421,
+                -0.4377494752407074,
+                0.6768905520439148
+              ],
+              "up": [
+                0.2881203293800354,
+                0.8990970849990845,
+                0.32956233620643616
+              ],
+              "fov": 36.869897309578676,
+              "type": "PERSP",
+              "ortho_scale": 6.0,
+              "default": false
+            },
+            {
+              "name": "03 • OVERVIEW / bounded canyon",
+              "position": [
+                22.0,
+                27.0,
+                30.0
+              ],
+              "forward": [
+                -0.4782223701477051,
+                -0.5499558448791504,
+                -0.6847276091575623
+              ],
+              "up": [
+                -0.31489843130111694,
+                0.8351936936378479,
+                -0.45087742805480957
+              ],
+              "fov": 30.510239871488103,
+              "type": "ORTHO",
+              "ortho_scale": 37.0,
+              "default": false
+            },
+            {
+              "name": "04 • DETAIL / robot and rover",
+              "position": [
+                0.6499999761581421,
+                4.199999809265137,
+                8.199999809265137
+              ],
+              "forward": [
+                -0.4027251601219177,
+                -0.28320643305778503,
+                -0.8704060316085815
+              ],
+              "up": [
+                -0.11892325431108475,
+                0.9590590000152588,
+                -0.2570275664329529
+              ],
+              "fov": 28.64543942617642,
+              "type": "PERSP",
+              "ortho_scale": 6.0,
+              "default": false
+            },
+            {
+              "name": "05 • TENT / interior and structure",
+              "position": [
+                5.140737056732178,
+                1.519448161125183,
+                -3.4730310440063477
+              ],
+              "forward": [
+                0.3346484899520874,
+                -0.17881840467453003,
+                -0.9252212643623352
+              ],
+              "up": [
+                0.06082160770893097,
+                0.9838820695877075,
+                -0.1681569516658783
+              ],
+              "fov": 53.1301017798049,
+              "type": "PERSP",
+              "ortho_scale": 6.0,
+              "default": false
+            }
+          ],
+          "procedural_color_approximations": [
+            "CANVAS | ochre woven cotton",
+            "CANVAS | patched sunbleached cotton",
+            "CANVAS | shaded olive brown",
+            "Canyon sediment 00",
+            "Canyon sediment 01",
+            "Canyon sediment 02",
+            "Canyon sediment 03",
+            "Canyon sediment 04",
+            "LEATHER | field brown",
+            "METAL | aged brass",
+            "METAL | brushed warm steel",
+            "METAL | oxidized charcoal",
+            "PARCHMENT | warm fibers",
+            "ROBOT | ceramic blue grey",
+            "ROPE | twisted hemp",
+            "ROVER | dusty grey olive enamel",
+            "ROVER | faded bonnet enamel",
+            "RUBBER | tread compound",
+            "SAND | fine ochre grains",
+            "SANDSTONE | sun worn edges",
+            "SANDSTONE | warm layered weathering",
+            "TEXTILE | expedition blue",
+            "TIMBER | dark pole",
+            "TIMBER | plank variation 0",
+            "TIMBER | plank variation 1",
+            "TIMBER | plank variation 2",
+            "TIMBER | plank variation 3",
+            "TIMBER | plank variation 4",
+            "TIMBER | worn end grain"
+          ],
+          "material_note": "保留几何和可导出的图像纹理；程序材质使用代表色，Cycles 光照与复杂材质效果不完全等同。",
+          "bytes": 26019604,
+          "seconds": 19.26,
+          "exporter_version": 1
+        }
+      },
+      "with_mira_scene": {
+        "dataset": "demo_data",
+        "model": "cases/Gemini_Generated_Image_dfwzixdfwzixdfwz/demo_data.glb",
+        "model_info": {
+          "source": "data/demo_data/Gemini_Generated_Image_dfwzixdfwzixdfwz/017_Gemini_Generated_Image_dfwzixdfwzixdfwz_demo_data.blend",
+          "source_sha256": "8aec9b534a72dd0afe855e9afaa57cd6c35c6d38f9de3a3ff67858722b37a3a2",
+          "blender_version": "4.5.3 LTS",
+          "scene": "SUNDOWN | Archaeological expedition camp",
+          "source_scene_meshes": 1503,
+          "export_objects": 2165,
+          "export_mesh_objects": 1503,
+          "cameras": [
+            {
+              "name": "01 | REFERENCE - sunset camp",
+              "position": [
+                0.20000000298023224,
+                2.6500000953674316,
+                7.0
+              ],
+              "forward": [
+                -0.00499187083914876,
+                -0.05678272247314453,
+                -0.9983739852905273
+              ],
+              "up": [
+                -0.00028390996158123016,
+                0.9983865022659302,
+                -0.056781984865665436
+              ],
+              "fov": 39.96621330564221,
+              "type": "PERSP",
+              "ortho_scale": 6.0,
+              "default": true
+            },
+            {
+              "name": "02 | INTERIOR - reverse camp walkthrough",
+              "position": [
+                -0.800000011920929,
+                3.0,
+                -9.0
+              ],
+              "forward": [
+                0.07886853814125061,
+                -0.14787845313549042,
+                0.9858558177947998
+              ],
+              "up": [
+                0.011792708188295364,
+                0.9890055656433105,
+                0.14740750193595886
+              ],
+              "fov": 51.28200968475036,
+              "type": "PERSP",
+              "ortho_scale": 6.0,
+              "default": false
+            },
+            {
+              "name": "03 | OVERVIEW - entire finite environment",
+              "position": [
+                31.0,
+                31.0,
+                36.0
+              ],
+              "forward": [
+                -0.5121142864227295,
+                -0.4575986862182617,
+                -0.7268715500831604
+              ],
+              "up": [
+                -0.26355570554733276,
+                0.8891587853431702,
+                -0.37407878041267395
+              ],
+              "fov": 33.39849122996013,
+              "type": "PERSP",
+              "ortho_scale": 6.0,
+              "default": false
+            },
+            {
+              "name": "04 | TENTS - complete rear camp",
+              "position": [
+                4.099999904632568,
+                3.0999999046325684,
+                -17.600000381469727
+              ],
+              "forward": [
+                -0.5466288328170776,
+                -0.14750266075134277,
+                0.8242815136909485
+              ],
+              "up": [
+                -0.08152095228433609,
+                0.989061713218689,
+                0.12292829155921936
+              ],
+              "fov": 43.60282117071586,
+              "type": "PERSP",
+              "ortho_scale": 6.0,
+              "default": false
+            },
+            {
+              "name": "05 | DETAIL - canvas and cartography",
+              "position": [
+                0.550000011920929,
+                2.1500000953674316,
+                4.75
+              ],
+              "forward": [
+                0.5494296550750732,
+                -0.3610536754131317,
+                -0.7535034418106079
+              ],
+              "up": [
+                0.2127228081226349,
+                0.9325450658798218,
+                -0.291733980178833
+              ],
+              "fov": 29.24174738411709,
+              "type": "PERSP",
+              "ortho_scale": 6.0,
+              "default": false
+            }
+          ],
+          "procedural_color_approximations": [
+            "Canvas | faded sunlit panels",
+            "Canvas | olive patch panels",
+            "Canvas | sand flax outer",
+            "Leather | saddle hide",
+            "Paper | expedition map",
+            "Rope | twisted jute",
+            "Sand | warm ochre fine quartz",
+            "Sandstone | stratum 00",
+            "Sandstone | stratum 01",
+            "Sandstone | stratum 02",
+            "Sandstone | stratum 03",
+            "Sandstone | stratum 04",
+            "Sandstone | stratum 05",
+            "Sandstone | stratum 06",
+            "Wood | rubbed slats",
+            "Wood | rubbed slats | grain 0",
+            "Wood | rubbed slats | grain 1",
+            "Wood | weathered acacia",
+            "Wood | weathered acacia | grain 0",
+            "Wood | weathered acacia | grain 1"
+          ],
+          "material_note": "保留几何和可导出的图像纹理；程序材质使用代表色，Cycles 光照与复杂材质效果不完全等同。",
+          "bytes": 45355952,
+          "seconds": 12.03,
+          "exporter_version": 1,
+          "original_export_source": "/mnt/pfs/users/lilin/scene_data/demo_data/organized_scenes/017_Gemini_Generated_Image_dfwzixdfwzixdfwz.blend"
+        }
+      }
+    },
+    {
+      "id": "Gemini_Generated_Image_dh6x0wdh6x0wdh6x",
+      "thumbnail": "cases/Gemini_Generated_Image_dh6x0wdh6x0wdh6x/input/scene.png",
+      "from_scratch": {
+        "dataset": "scene_image",
+        "model": "cases/Gemini_Generated_Image_dh6x0wdh6x0wdh6x/scene_image.glb",
+        "model_info": {
+          "source": "/mnt/pfs/users/lilin/scene_data/scene_comparison/data/scene_image/Gemini_Generated_Image_dh6x0wdh6x0wdh6x/018_Gemini_Generated_Image_dh6x0wdh6x0wdh6x_scene_image.blend",
+          "source_sha256": "45fc08790bb2aa65d4076a20eaa822df81b6ed48b240f34a6af5c5d3d03c475f",
+          "blender_version": "4.5.3 LTS",
+          "scene": "Scene",
+          "source_scene_meshes": 1229,
+          "export_objects": 2038,
+          "export_mesh_objects": 1229,
+          "cameras": [
+            {
+              "name": "01 • Reference composition",
+              "position": [
+                2.799999952316284,
+                2.799999952316284,
+                6.019999980926514
+              ],
+              "forward": [
+                -0.39844006299972534,
+                -0.2953951358795166,
+                -0.8683244585990906
+              ],
+              "up": [
+                -0.12319473177194595,
+                0.9553752541542053,
+                -0.26847967505455017
+              ],
+              "fov": 36.869897309578676,
+              "type": "PERSP",
+              "ortho_scale": 6.0,
+              "default": true
+            },
+            {
+              "name": "02 • Reverse courtyard inspection",
+              "position": [
+                -0.44999998807907104,
+                5.0,
+                -5.820000171661377
+              ],
+              "forward": [
+                0.06506900489330292,
+                -0.5619592070579529,
+                0.8246015906333923
+              ],
+              "up": [
+                0.04420660436153412,
+                0.8271649479866028,
+                0.5602177977561951
+              ],
+              "fov": 43.60282117071586,
+              "type": "PERSP",
+              "ortho_scale": 6.0,
+              "default": false
+            },
+            {
+              "name": "03 • Entire enclosed courtyard",
+              "position": [
+                12.0,
+                12.5,
+                15.0
+              ],
+              "forward": [
+                -0.5354023575782776,
+                -0.5064013600349426,
+                -0.6759454607963562
+              ],
+              "up": [
+                -0.314425528049469,
+                0.8622980117797852,
+                -0.3969620168209076
+              ],
+              "fov": 31.89079185747693,
+              "type": "PERSP",
+              "ortho_scale": 6.0,
+              "default": false
+            },
+            {
+              "name": "04 • Lantern, iris and ceramic koi",
+              "position": [
+                4.099999904632568,
+                2.2799999713897705,
+                3.4800000190734863
+              ],
+              "forward": [
+                -0.6427447199821472,
+                -0.2625293731689453,
+                -0.7196927666664124
+              ],
+              "up": [
+                -0.17487317323684692,
+                0.9649240374565125,
+                -0.19580863416194916
+              ],
+              "fov": 25.51506469181661,
+              "type": "PERSP",
+              "ortho_scale": 6.0,
+              "default": false
+            }
+          ],
+          "procedural_color_approximations": [
+            "Bench • vermilion urushi lacquer",
+            "Cedar • lengthwise fine grain",
+            "Cedar • worn edge",
+            "Foundation • charcoal basalt",
+            "Garden soil and velvety moss",
+            "Granite | weathered, moss on upward faces",
+            "Iris leaves • living green",
+            "Ivory lime plaster",
+            "Kawara ceramic • blue charcoal",
+            "Kohaku • vermilion patches on pearl",
+            "Maple bark • fine fissures",
+            "Paving mineral variation 0",
+            "Paving mineral variation 1",
+            "Paving mineral variation 2",
+            "Paving mineral variation 3",
+            "Paving mineral variation 4",
+            "Sanke • pearl, sumi and tangerine",
+            "Wet slate | fine mineral grain",
+            "Yamabuki • golden scales",
+            "Zabuton • muted woven tatami fabric"
+          ],
+          "material_note": "保留几何和可导出的图像纹理；程序材质使用代表色，Cycles 光照与复杂材质效果不完全等同。",
+          "bytes": 22353996,
+          "seconds": 14.17,
+          "exporter_version": 1
+        }
+      },
+      "with_mira_scene": {
+        "dataset": "demo_data",
+        "model": "cases/Gemini_Generated_Image_dh6x0wdh6x0wdh6x/demo_data.glb",
+        "model_info": {
+          "source": "data/demo_data/Gemini_Generated_Image_dh6x0wdh6x0wdh6x/018_Gemini_Generated_Image_dh6x0wdh6x0wdh6x_demo_data.blend",
+          "source_sha256": "b11617bca2187f8424ca3156f0bb873430de357ad757bf90196cfc0d82e4a63b",
+          "blender_version": "4.5.3 LTS",
+          "scene": "Scene",
+          "source_scene_meshes": 1370,
+          "export_objects": 1645,
+          "export_mesh_objects": 1370,
+          "cameras": [
+            {
+              "name": "Camera 01 | Reference composition",
+              "position": [
+                1.7999999523162842,
+                1.8300000429153442,
+                3.5999999046325684
+              ],
+              "forward": [
+                -0.2916472554206848,
+                -0.26417306065559387,
+                -0.9193228483200073
+              ],
+              "up": [
+                -0.0798831582069397,
+                0.9644752740859985,
+                -0.2518056631088257
+              ],
+              "fov": 35.051134046820174,
+              "type": "PERSP",
+              "ortho_scale": 6.0,
+              "default": true
+            },
+            {
+              "name": "Camera 02 | Reverse courtyard",
+              "position": [
+                -0.8999999761581421,
+                1.5499999523162842,
+                -4.099999904632568
+              ],
+              "forward": [
+                0.2114071100950241,
+                -0.1733536273241043,
+                0.9619020819664001
+              ],
+              "up": [
+                0.037211641669273376,
+                0.9848596453666687,
+                0.16931262612342834
+              ],
+              "fov": 53.1301017798049,
+              "type": "PERSP",
+              "ortho_scale": 6.0,
+              "default": false
+            },
+            {
+              "name": "Camera 03 | Complete enclosure",
+              "position": [
+                12.0,
+                12.0,
+                14.0
+              ],
+              "forward": [
+                -0.5448758602142334,
+                -0.49214625358581543,
+                -0.6788979172706604
+              ],
+              "up": [
+                -0.3080468773841858,
+                0.8705125451087952,
+                -0.3838164806365967
+              ],
+              "fov": 46.397181333762305,
+              "type": "ORTHO",
+              "ortho_scale": 15.800000190734863,
+              "default": false
+            },
+            {
+              "name": "Camera 04 | Veranda craftsmanship",
+              "position": [
+                0.25,
+                1.7000000476837158,
+                -2.799999952316284
+              ],
+              "forward": [
+                -0.934893012046814,
+                -0.10198825597763062,
+                -0.3399609327316284
+              ],
+              "up": [
+                -0.095847949385643,
+                0.9947856664657593,
+                -0.034853652119636536
+              ],
+              "fov": 41.11209023703316,
+              "type": "PERSP",
+              "ortho_scale": 6.0,
+              "default": false
+            }
+          ],
+          "procedural_color_approximations": [
+            "Aged bamboo",
+            "Basalt | wet fine grain",
+            "Cedar | along veranda boards",
+            "Cedar | transverse grain",
+            "Cedar | vertical grain",
+            "Garden soil | dark loam",
+            "Maple bark | aged fissures",
+            "Moss | fine olive velvet",
+            "Pond bed | fine pebbles",
+            "Slate | soft grey variation",
+            "Smoked blue ceramic tiles",
+            "Tatami straw 0.7",
+            "Tatami straw 2.3",
+            "Tatami straw 4.0",
+            "Tatami straw 5.5",
+            "Warm lime plaster"
+          ],
+          "material_note": "保留几何和可导出的图像纹理；程序材质使用代表色，Cycles 光照与复杂材质效果不完全等同。",
+          "bytes": 32851508,
+          "seconds": 17.34,
+          "exporter_version": 1,
+          "original_export_source": "/mnt/pfs/users/lilin/demo_data/organized_scenes/018_Gemini_Generated_Image_dh6x0wdh6x0wdh6x.blend"
+        }
+      }
+    },
+    {
+      "id": "Gemini_Generated_Image_gkkzzjgkkzzjgkkz",
+      "thumbnail": "cases/Gemini_Generated_Image_gkkzzjgkkzzjgkkz/input/scene.png",
+      "from_scratch": {
+        "dataset": "scene_image",
+        "model": "cases/Gemini_Generated_Image_gkkzzjgkkzzjgkkz/scene_image.glb",
+        "model_info": {
+          "source": "/mnt/pfs/users/lilin/scene_data/scene_comparison/data/scene_image/Gemini_Generated_Image_gkkzzjgkkzzjgkkz/019_Gemini_Generated_Image_gkkzzjgkkzzjgkkz_scene_image.blend",
+          "source_sha256": "87218ee883f0217329177553a298aa3d8849d5b279ccb6e1ecc8b3205a8a7679",
+          "blender_version": "4.5.3 LTS",
+          "scene": "01 | THE HOROLOGIST - Complete interior",
+          "source_scene_meshes": 2970,
+          "export_objects": 4799,
+          "export_mesh_objects": 2970,
+          "cameras": [
+            {
+              "name": "01 HERO | reference-inspired interior",
+              "position": [
+                1.850000023841858,
+                2.0,
+                2.130000114440918
+              ],
+              "forward": [
+                -0.6102883815765381,
+                -0.11982819437980652,
+                -0.783064067363739
+              ],
+              "up": [
+                -0.07366058230400085,
+                0.9927946329116821,
+                -0.09451408684253693
+              ],
+              "fov": 51.28200968475036,
+              "type": "PERSP",
+              "ortho_scale": 6.0,
+              "default": true
+            },
+            {
+              "name": "02 ROOM | full interior with ceiling",
+              "position": [
+                0.8199999928474426,
+                2.140000104904175,
+                2.180000066757202
+              ],
+              "forward": [
+                -0.3124232292175293,
+                -0.2071501612663269,
+                -0.9270817637443542
+              ],
+              "up": [
+                -0.06615343689918518,
+                0.9783092141151428,
+                -0.19630318880081177
+              ],
+              "fov": 64.55128456271177,
+              "type": "PERSP",
+              "ortho_scale": 6.0,
+              "default": false
+            },
+            {
+              "name": "03 REVERSE | entrance and east library",
+              "position": [
+                -1.9600000381469727,
+                2.200000047683716,
+                -1.5199999809265137
+              ],
+              "forward": [
+                0.7167469263076782,
+                -0.24190203845500946,
+                0.6540315747261047
+              ],
+              "up": [
+                0.17868950963020325,
+                0.9703007340431213,
+                0.16305410861968994
+              ],
+              "fov": 61.92751520437556,
+              "type": "PERSP",
+              "ortho_scale": 6.0,
+              "default": false
+            },
+            {
+              "name": "04 DETAIL | owl bronze and Tiffany",
+              "position": [
+                0.7799999713897705,
+                1.9800000190734863,
+                1.7200000286102295
+              ],
+              "forward": [
+                -0.5571315884590149,
+                -0.15599671006202698,
+                -0.8156405091285706
+              ],
+              "up": [
+                -0.08798792213201523,
+                0.9877576231956482,
+                -0.1288142204284668
+              ],
+              "fov": 29.24174738411709,
+              "type": "PERSP",
+              "ortho_scale": 6.0,
+              "default": false
+            }
+          ],
+          "procedural_color_approximations": [
+            "Aged gilding",
+            "Aged ivory",
+            "Bottle-green leather",
+            "Brushed antique brass",
+            "Cartography | aged parchment",
+            "Cartography | engraved sepia land",
+            "Ebonised oak",
+            "Ebonised oak | grain Z",
+            "Foxed book edges",
+            "Globe faded ochre continents",
+            "Globe parchment ocean",
+            "Honey oak | satin endgrain",
+            "Honey oak | satin endgrain | grain Y",
+            "Honey oak | satin endgrain | grain Z",
+            "Indigo bookcloth",
+            "Ochre velvet",
+            "Olive heritage wallpaper",
+            "Oxblood leather",
+            "Parquet oak 00",
+            "Parquet oak 01",
+            "Parquet oak 02",
+            "Parquet oak 03",
+            "Parquet oak 04",
+            "Persian rug | oxblood wool",
+            "Taxidermy | russet feather",
+            "Tiffany glass | Buttermilk",
+            "Tiffany glass | Honey",
+            "Tiffany glass | Ivory",
+            "Tiffany glass | Ruby",
+            "Tiffany glass | Sage",
+            "Verdigris bronze",
+            "Walnut | longitudinal fine grain",
+            "Walnut | longitudinal fine grain | grain Y",
+            "Walnut | longitudinal fine grain | grain Z",
+            "Warm lime plaster"
+          ],
+          "material_note": "保留几何和可导出的图像纹理；程序材质使用代表色，Cycles 光照与复杂材质效果不完全等同。",
+          "bytes": 39509384,
+          "seconds": 28.31,
+          "exporter_version": 1
+        }
+      },
+      "with_mira_scene": {
+        "dataset": "demo_data",
+        "model": "cases/Gemini_Generated_Image_gkkzzjgkkzzjgkkz/demo_data.glb",
+        "model_info": {
+          "source": "data/demo_data/Gemini_Generated_Image_gkkzzjgkkzzjgkkz/019_Gemini_Generated_Image_gkkzzjgkkzzjgkkz_demo_data.blend",
+          "source_sha256": "7a70ec59401a4451ab526904fc22c4c761e6fee8cd83fcb5678fcddc5d92bf8b",
+          "blender_version": "4.5.3 LTS",
+          "scene": "01 • Complete room",
+          "source_scene_meshes": 1012,
+          "export_objects": 1537,
+          "export_mesh_objects": 1012,
+          "cameras": [
+            {
+              "name": "01 | Reference composition",
+              "position": [
+                2.1600000858306885,
+                1.9199999570846558,
+                2.130000114440918
+              ],
+              "forward": [
+                -0.6326096057891846,
+                -0.08301207423210144,
+                -0.7700091600418091
+              ],
+              "up": [
+                -0.05269613862037659,
+                0.9965485334396362,
+                -0.0641414076089859
+              ],
+              "fov": 53.1301017798049,
+              "type": "PERSP",
+              "ortho_scale": 6.0,
+              "default": true
+            },
+            {
+              "name": "02 | Reverse view — complete room",
+              "position": [
+                -1.3899999856948853,
+                1.940000057220459,
+                -1.659999966621399
+              ],
+              "forward": [
+                0.593724250793457,
+                -0.1332259178161621,
+                0.7935631275177002
+              ],
+              "up": [
+                0.07981094717979431,
+                0.9910857677459717,
+                0.10667407512664795
+              ],
+              "fov": 59.48976604808465,
+              "type": "PERSP",
+              "ortho_scale": 6.0,
+              "default": false
+            },
+            {
+              "name": "03 | Gallery and joinery detail",
+              "position": [
+                0.7200000286102295,
+                1.7799999713897705,
+                1.4700000286102295
+              ],
+              "forward": [
+                -0.7435134649276733,
+                0.049823254346847534,
+                -0.6668623685836792
+              ],
+              "up": [
+                0.03709036111831665,
+                0.99875807762146,
+                0.03326655924320221
+              ],
+              "fov": 38.88006979363762,
+              "type": "PERSP",
+              "ortho_scale": 6.0,
+              "default": false
+            },
+            {
+              "name": "04 | Cutaway inspection",
+              "position": [
+                7.0,
+                8.399999618530273,
+                9.0
+              ],
+              "forward": [
+                -0.5093381404876709,
+                -0.5343502759933472,
+                -0.674569845199585
+              ],
+              "up": [
+                -0.32198840379714966,
+                0.8452631831169128,
+                -0.4264429807662964
+              ],
+              "fov": 28.64543942617642,
+              "type": "PERSP",
+              "ortho_scale": 6.0,
+              "default": false
+            }
+          ],
+          "procedural_color_approximations": [
+            "Aged bone specimen",
+            "Aged ormolu | satin brass",
+            "Antique page edges",
+            "Muted olive mineral plaster",
+            "Oak floorboard tone 00",
+            "Oak floorboard tone 01",
+            "Oak floorboard tone 02",
+            "Oak floorboard tone 03",
+            "Oak floorboard tone 04",
+            "Oak floorboard tone 05",
+            "Oak floorboard tone 06",
+            "Oak floorboard tone 07",
+            "Olive velvet curtain",
+            "Walnut | fine longitudinal grain",
+            "Walnut | vertical stile grain",
+            "Warm lime ceiling infill"
+          ],
+          "material_note": "保留几何和可导出的图像纹理；程序材质使用代表色，Cycles 光照与复杂材质效果不完全等同。",
+          "bytes": 46270040,
+          "seconds": 12.33,
+          "exporter_version": 1,
+          "original_export_source": "/mnt/pfs/users/lilin/scene_data/demo_data/organized_scenes/019_Gemini_Generated_Image_gkkzzjgkkzzjgkkz.blend"
+        }
+      }
+    },
+    {
+      "id": "Gemini_Generated_Image_ac4a5mac4a5mac4a",
+      "thumbnail": "cases/Gemini_Generated_Image_ac4a5mac4a5mac4a/input/scene.png",
+      "from_scratch": {
+        "dataset": "scene_image",
+        "model": "cases/Gemini_Generated_Image_ac4a5mac4a5mac4a/scene_image.glb",
+        "model_info": {
+          "source": "/mnt/pfs/users/lilin/scene_data/scene_comparison/data/scene_image/Gemini_Generated_Image_ac4a5mac4a5mac4a/016_Gemini_Generated_Image_ac4a5mac4a5mac4a_scene_image.blend",
+          "source_sha256": "06f46bde2184b8194945b61a1a091a65d3ceb89f81e7e7ba8fc9e07eb4418bee",
+          "blender_version": "4.5.3 LTS",
+          "scene": "01 | Aurelia sunset roof garden",
+          "source_scene_meshes": 2592,
+          "export_objects": 2857,
+          "export_mesh_objects": 2592,
+          "cameras": [
+            {
+              "name": "01 | Reference composition",
+              "position": [
+                1.1200000047683716,
+                2.0999999046325684,
+                5.929999828338623
+              ],
+              "forward": [
+                -0.28329673409461975,
+                -0.08485224843025208,
+                -0.9552711248397827
+              ],
+              "up": [
+                -0.0241253525018692,
+                0.9963935017585754,
+                -0.08135034888982773
+              ],
+              "fov": 57.22092063977898,
+              "type": "PERSP",
+              "ortho_scale": 6.0,
+              "default": true
+            },
+            {
+              "name": "02 | Reverse - complete rear faces",
+              "position": [
+                3.2300000190734863,
+                2.9200000762939453,
+                -5.409999847412109
+              ],
+              "forward": [
+                -0.5221034288406372,
+                -0.21217918395996094,
+                0.8260678052902222
+              ],
+              "up": [
+                -0.11336064338684082,
+                0.9772307872772217,
+                0.17935824394226074
+              ],
+              "fov": 53.1301017798049,
+              "type": "PERSP",
+              "ortho_scale": 6.0,
+              "default": false
+            },
+            {
+              "name": "03 | Hydroponics and garden robot",
+              "position": [
+                1.2000000476837158,
+                1.8600000143051147,
+                4.170000076293945
+              ],
+              "forward": [
+                -0.5793506503105164,
+                -0.13146790862083435,
+                -0.8044060468673706
+              ],
+              "up": [
+                -0.07683289051055908,
+                0.9913204908370972,
+                -0.1066795215010643
+              ],
+              "fov": 41.11209023703316,
+              "type": "PERSP",
+              "ortho_scale": 6.0,
+              "default": false
+            },
+            {
+              "name": "04 | Complete terrace - aerial",
+              "position": [
+                13.0,
+                15.0,
+                17.0
+              ],
+              "forward": [
+                -0.5050724744796753,
+                -0.5555797219276428,
+                -0.6604794263839722
+              ],
+              "up": [
+                -0.33748698234558105,
+                0.8314633369445801,
+                -0.44132906198501587
+              ],
+              "fov": 33.39849122996013,
+              "type": "ORTHO",
+              "ortho_scale": 17.799999237060547,
+              "default": false
+            },
+            {
+              "name": "05 | Lounge and canopy",
+              "position": [
+                0.0,
+                1.5800000429153442,
+                3.4000000953674316
+              ],
+              "forward": [
+                0.4907488226890564,
+                -0.003443509340286255,
+                -0.871294379234314
+              ],
+              "up": [
+                0.0016899555921554565,
+                0.999994158744812,
+                -0.0030002817511558533
+              ],
+              "fov": 51.28200968475036,
+              "type": "PERSP",
+              "ortho_scale": 6.0,
+              "default": false
+            }
+          ],
+          "procedural_color_approximations": [
+            "Architectural mineral shell",
+            "Botanical | kale",
+            "Botanical | leaf",
+            "Botanical | lettuce",
+            "Botanical | palm",
+            "Champagne brushed titanium",
+            "Moist expanded clay & soil",
+            "Oiled teak long grain",
+            "Olive bark",
+            "Recycled rubber",
+            "Sage woven outdoor fabric",
+            "Steam-bent teak | continuous UV grain",
+            "Warm ivory limestone | true object scale"
+          ],
+          "material_note": "保留几何和可导出的图像纹理；程序材质使用代表色，Cycles 光照与复杂材质效果不完全等同。",
+          "bytes": 41544516,
+          "seconds": 20.09,
+          "exporter_version": 1
+        }
+      },
+      "with_mira_scene": {
+        "dataset": "demo_data",
+        "model": "cases/Gemini_Generated_Image_ac4a5mac4a5mac4a/demo_data.glb",
+        "model_info": {
+          "source": "data/demo_data/Gemini_Generated_Image_ac4a5mac4a5mac4a/016_Gemini_Generated_Image_ac4a5mac4a5mac4a_demo_data.blend",
+          "source_sha256": "34edbe37e109d8d3389ef92124adc401aa7c57a993eb8d239773a4003808532f",
+          "blender_version": "4.5.3 LTS",
+          "scene": "Scene",
+          "source_scene_meshes": 179,
+          "export_objects": 178,
+          "export_mesh_objects": 175,
+          "cameras": [
+            {
+              "name": "01_Reference_hero",
+              "position": [
+                0.3799999952316284,
+                2.4700000286102295,
+                3.1500000953674316
+              ],
+              "forward": [
+                -0.10957102477550507,
+                -0.14957314729690552,
+                -0.9826607704162598
+              ],
+              "up": [
+                -0.01657535322010517,
+                0.988750696182251,
+                -0.14865191280841827
+              ],
+              "fov": 47.92497853787827,
+              "type": "PERSP",
+              "ortho_scale": 6.0,
+              "default": true
+            },
+            {
+              "name": "02_Whole_rooftop",
+              "position": [
+                10.0,
+                10.399999618530273,
+                12.0
+              ],
+              "forward": [
+                -0.5191039443016052,
+                -0.4735238552093506,
+                -0.7115519642829895
+              ],
+              "up": [
+                -0.27907970547676086,
+                0.8807809948921204,
+                -0.38254329562187195
+              ],
+              "fov": 28.64543942617642,
+              "type": "PERSP",
+              "ortho_scale": 6.0,
+              "default": false
+            },
+            {
+              "name": "03_Reverse_structure",
+              "position": [
+                -8.800000190734863,
+                7.0,
+                -11.399999618530273
+              ],
+              "forward": [
+                0.6187666654586792,
+                -0.41251125931739807,
+                0.6685525178909302
+              ],
+              "up": [
+                0.28019922971725464,
+                0.9109525680541992,
+                0.3027440309524536
+              ],
+              "fov": 29.862836975913858,
+              "type": "PERSP",
+              "ortho_scale": 6.0,
+              "default": false
+            },
+            {
+              "name": "04_Plan_layout",
+              "position": [
+                0.0,
+                13.0,
+                -2.200000047683716
+              ],
+              "forward": [
+                0.0,
+                -1.0,
+                -0.0
+              ],
+              "up": [
+                0.0,
+                0.0,
+                -1.0
+              ],
+              "fov": 33.39849122996013,
+              "type": "ORTHO",
+              "ortho_scale": 9.600000381469727,
+              "default": false
+            },
+            {
+              "name": "05_Lounge_detail",
+              "position": [
+                3.299999952316284,
+                1.7799999713897705,
+                0.10000000149011612
+              ],
+              "forward": [
+                -0.4702855050563812,
+                -0.16831287741661072,
+                -0.8663153648376465
+              ],
+              "up": [
+                -0.0803007185459137,
+                0.9857336282730103,
+                -0.14792226254940033
+              ],
+              "fov": 36.869897309578676,
+              "type": "PERSP",
+              "ortho_scale": 6.0,
+              "default": false
+            },
+            {
+              "name": "06_Eye_level_garden",
+              "position": [
+                -0.30000001192092896,
+                1.7200000286102295,
+                1.1799999475479126
+              ],
+              "forward": [
+                0.08496266603469849,
+                -0.06797003746032715,
+                -0.9940631985664368
+              ],
+              "up": [
+                0.00578828901052475,
+                0.9976875185966492,
+                -0.06772314757108688
+              ],
+              "fov": 53.1301017798049,
+              "type": "PERSP",
+              "ortho_scale": 6.0,
+              "default": false
+            }
+          ],
+          "procedural_color_approximations": [
+            "Brushed champagne bronze",
+            "Dark organic growing medium",
+            "Limestone | pearl warm 00",
+            "Limestone | pearl warm 01",
+            "Limestone | pearl warm 02",
+            "Limestone | pearl warm 03",
+            "Limestone | pearl warm 04",
+            "Limestone | pearl warm 05",
+            "Oiled teak | board 00",
+            "Oiled teak | board 01",
+            "Oiled teak | board 02",
+            "Oiled teak | board 03",
+            "Oiled teak | board 04",
+            "Oiled teak | board 05",
+            "Oiled teak | board 06",
+            "River gravel 00",
+            "River gravel 01",
+            "River gravel 02",
+            "River gravel 03",
+            "Sculpted ivory mineral composite",
+            "Sea glass outdoor woven upholstery",
+            "Tree bark",
+            "Warm ivory outdoor upholstery"
+          ],
+          "material_note": "保留几何和可导出的图像纹理；程序材质使用代表色，Cycles 光照与复杂材质效果不完全等同。",
+          "bytes": 81593036,
+          "seconds": 10.54,
+          "exporter_version": 1,
+          "original_export_source": "/mnt/pfs/users/lilin/scene_data/demo_data/organized_scenes/016_Gemini_Generated_Image_ac4a5mac4a5mac4a.blend"
+        }
+      }
+    }
+  ]
+}

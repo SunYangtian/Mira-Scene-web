@@ -1,0 +1,113 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "012_hotel_lobby",
+      "label": "012 hotel lobby",
+      "thumbnail": "data/mira-scene-results/012_hotel_lobby/scene.png",
+      "model": "data/mira-scene-results/012_hotel_lobby/scene_with_floor.glb",
+      "environment": "data/mira-scene-results/012_hotel_lobby/environment_equirect.png",
+      "method": "ppd_depth",
+      "static_demo": true
+    },
+    {
+      "id": "Gemini_Generated_Image_sjbz27sjbz27sjbz",
+      "label": "Gemini Generated Image sjbz27sjbz27sjbz",
+      "thumbnail": "data/mira-scene-results/Gemini_Generated_Image_sjbz27sjbz27sjbz/scene.png",
+      "model": "data/mira-scene-results/Gemini_Generated_Image_sjbz27sjbz27sjbz/scene_with_floor.glb",
+      "environment": "data/mira-scene-results/Gemini_Generated_Image_sjbz27sjbz27sjbz/environment_equirect.png",
+      "method": "ppd_depth",
+      "static_demo": true
+    },
+    {
+      "id": "003_home_office",
+      "label": "003 home office",
+      "thumbnail": "data/mira-scene-results/003_home_office/scene.png",
+      "model": "data/mira-scene-results/003_home_office/scene_with_floor.glb",
+      "environment": "data/mira-scene-results/003_home_office/environment_equirect.png",
+      "method": "ppd_depth",
+      "static_demo": true
+    },
+    {
+      "id": "Gemini_Generated_Image_dfwzixdfwzixdfwz",
+      "label": "Gemini Generated Image dfwzixdfwzixdfwz",
+      "thumbnail": "data/mira-scene-results/Gemini_Generated_Image_dfwzixdfwzixdfwz/scene.png",
+      "model": "data/mira-scene-results/Gemini_Generated_Image_dfwzixdfwzixdfwz/scene_with_floor.glb",
+      "environment": "data/mira-scene-results/Gemini_Generated_Image_dfwzixdfwzixdfwz/environment_equirect.png",
+      "method": "ppd_depth",
+      "static_demo": true
+    },
+    {
+      "id": "Gemini_Generated_Image_8rhdjt8rhdjt8rhd",
+      "label": "Gemini Generated Image 8rhdjt8rhdjt8rhd",
+      "thumbnail": "data/mira-scene-results/Gemini_Generated_Image_8rhdjt8rhdjt8rhd/scene.png",
+      "model": "data/mira-scene-results/Gemini_Generated_Image_8rhdjt8rhdjt8rhd/scene_with_floor.glb",
+      "environment": "data/mira-scene-results/Gemini_Generated_Image_8rhdjt8rhdjt8rhd/environment_equirect.png",
+      "method": "ppd_depth",
+      "static_demo": false
+    },
+    {
+      "id": "Gemini_Generated_Image_dh6x0wdh6x0wdh6x",
+      "label": "Gemini Generated Image dh6x0wdh6x0wdh6x",
+      "thumbnail": "data/mira-scene-results/Gemini_Generated_Image_dh6x0wdh6x0wdh6x/scene.png",
+      "model": "data/mira-scene-results/Gemini_Generated_Image_dh6x0wdh6x0wdh6x/scene_with_floor.glb",
+      "environment": "data/mira-scene-results/Gemini_Generated_Image_dh6x0wdh6x0wdh6x/environment_equirect.png",
+      "method": "ppd_depth",
+      "static_demo": false
+    },
+    {
+      "id": "scene05",
+      "label": "scene05",
+      "thumbnail": "data/mira-scene-results/scene05/scene.png",
+      "model": "data/mira-scene-results/scene05/scene_with_floor.glb",
+      "environment": "data/mira-scene-results/scene05/environment_equirect.png",
+      "method": "ppd_depth",
+      "static_demo": false
+    },
+    {
+      "id": "idea_table",
+      "label": "idea table",
+      "thumbnail": "data/mira-scene-results/idea_table/scene.png",
+      "model": "data/mira-scene-results/idea_table/scene_with_floor.glb",
+      "environment": "data/mira-scene-results/idea_table/environment_equirect.png",
+      "method": "ppd_depth",
+      "static_demo": false
+    },
+    {
+      "id": "designer-bedroom",
+      "label": "designer-bedroom",
+      "thumbnail": "data/mira-scene-results/designer-bedroom/scene.png",
+      "model": "data/mira-scene-results/designer-bedroom/scene_with_floor.glb",
+      "environment": "data/mira-scene-results/designer-bedroom/environment_equirect.png",
+      "method": "ppd_depth",
+      "static_demo": false
+    },
+    {
+      "id": "green-room_local_furniture_hq_v1",
+      "label": "green-room local furniture hq v1",
+      "thumbnail": "data/mira-scene-results/green-room_local_furniture_hq_v1/scene.png",
+      "model": "data/mira-scene-results/green-room_local_furniture_hq_v1/scene_with_floor.glb",
+      "environment": "data/mira-scene-results/green-room_local_furniture_hq_v1/environment_equirect.png",
+      "method": "ppd_depth",
+      "static_demo": false
+    },
+    {
+      "id": "italian-style-still-life",
+      "label": "italian-style-still-life",
+      "thumbnail": "data/mira-scene-results/italian-style-still-life/scene.png",
+      "model": "data/mira-scene-results/italian-style-still-life/scene_with_floor.glb",
+      "environment": "data/mira-scene-results/italian-style-still-life/environment_equirect.png",
+      "method": "ppd_depth",
+      "static_demo": false
+    },
+    {
+      "id": "the-white-room-cycles_countrylike_v12_bookshelf_full",
+      "label": "the-white-room-cycles countrylike v12 bookshelf full",
+      "thumbnail": "data/mira-scene-results/the-white-room-cycles_countrylike_v12_bookshelf_full/scene.png",
+      "model": "data/mira-scene-results/the-white-room-cycles_countrylike_v12_bookshelf_full/scene_with_floor.glb",
+      "environment": "data/mira-scene-results/the-white-room-cycles_countrylike_v12_bookshelf_full/environment_equirect.png",
+      "method": "ppd_depth",
+      "static_demo": false
+    }
+  ]
+}
