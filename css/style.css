@@ -408,9 +408,15 @@ table { border-collapse: collapse; }
   max-width: 26ch; margin-inline: auto;
   letter-spacing: -0.035em; font-weight: 700; line-height: 1.05;
 }
+/* Keep the full project title readable in two balanced lines on desktop. */
+.hero__title:not(.hero__title--home):not(.hero__title--list) {
+  font-size: clamp(2.15rem, 1.55rem + 2.4vw, 3.75rem);
+  max-width: 36ch;
+}
 /* 标题里 *星号* 包住的词：单一主色，不用渐变。
  * 渐变字在学术标题上显轻浮，纯色一样能强调。 */
 .hero__title em { font-style: normal; color: var(--brand); }
+.hero-title-break { display: block; }
 
 /* 首页主张：左对齐、更宽，读起来像一句话而不像论文标题 */
 .hero__title--home {

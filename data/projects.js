@@ -1,16 +1,17 @@
 window.SITE_DATA = {
-  site: { team: "Mira-Scene", teamShort: "Mira-Scene", tagline: "Pixel-Aligned Layouts for Generative 3D Scene", logo: "assets/favicon.svg", links: [], footer: { note: "Mira-Scene project page.", credit: "", contact: "mailto:sunyangtian98@gmail.com" } },
+  site: { team: "Mira-Scene", teamShort: "Mira-Scene", tagline: "Pixel-Aligned Layouts for Generative 3D Scene Reconstruction", logo: "assets/favicon.svg", links: [], footer: { note: "Mira-Scene project page.", credit: "", contact: "mailto:sunyangtian98@gmail.com" } },
   home: { title: "Mira-Scene", intro: "Pixel-aligned layouts for generative 3D scene reconstruction." },
   nav: [{ key: "research", label: "Project", title: "Mira-Scene", intro: "" }],
   projects: [{
     id: "mira-scene",
-    title: "Mira-Scene: Pixel-Aligned Layouts for Generative 3D Scene",
+    title: "Mira-Scene: Pixel-Aligned Layouts for Generative 3D Scene Reconstruction",
+    titleBreakAfter: "Mira-Scene: Pixel-Aligned Layouts",
     short: "Mira-Scene",
     subtitle: "Recovering dense canonical-to-scene correspondences for coherent, compositional 3D scene reconstruction from a single image.",
     date: "2026", thumb: "assets/teaser.jpg",
     keywords: ["3D scene reconstruction", "canonical coordinate map", "generative 3D", "layout"],
     authors: [
-      { name: "Yang-Tian Sun", email: "sunyangtian98@gmail.com", affil: [1], note: "*" }, { name: "Tianjia Liu", email: "u3572937@connect.hku.hk", affil: [1], note: "*" },
+      { name: "Yang-Tian Sun", url: "https://sunyangtian.github.io/", email: "sunyangtian98@gmail.com", affil: [1], note: "*" }, { name: "Tianjia Liu", email: "u3572937@connect.hku.hk", affil: [1], note: "*" },
       { name: "Zehuan Huang", email: "huanngzh@gmail.com", affil: [2], note: "†" }, { name: "Yi-Hua Huang", email: "huangyihua16@mails.ucas.ac.cn", affil: [1] },
       { name: "Xiaoyang Lyu", email: "shawlyu@connect.hku.hk", affil: [1] }, { name: "Ziyi Yang", email: "14ziyiyang@gmail.com", affil: [1] },
       { name: "Zi-Xin Zou", email: "zouzx1997@gmail.com", affil: [2] }, { name: "Yuan-Chen Guo", email: "imbennyguo@gmail.com", affil: [2] },
@@ -19,6 +20,7 @@ window.SITE_DATA = {
     affiliations: ["The University of Hong Kong", "VAST"],
     authorNotes: "* Equal Contribution   † Project Lead   ✉ Corresponding Authors",
     links: [
+      { label: "arXiv", href: "https://arxiv.org/pdf/2609.23796", icon: "arxiv" },
       { label: "Code", href: "https://github.com/VAST-AI-Research/Mira-Scene", icon: "github" },
       { label: "Checkpoint", href: "https://huggingface.co/Yang-Tian/Mira-Scene", icon: "hf" },
       { label: "Dataset", href: "https://huggingface.co/datasets/Yang-Tian/Mira-Scene-Dataset", icon: "data" },
@@ -44,7 +46,7 @@ window.SITE_DATA = {
         ] },
       ] },
     ],
-    bibtex: "@article{sun2026mira,\n  title={Mira-Scene: Pixel-Aligned Layouts for Generative 3D Scene},\n  author={Sun, Yang-Tian and Liu, Tianjia and Huang, Zehuan and others},\n  year={2026}\n}",
+    bibtex: "@article{sun2026mira,\n  title={Mira-Scene: Pixel-Aligned Layouts for Generative 3D Scene Reconstruction},\n  author={Sun Yang-Tian and Liu Tianjia and Huang Zehuan and Huang Yi-Hua and Lyu Xiaoyang and Yang Ziyi and Zou Zi-Xin and Guo Yuan-Chen and Cao Yan-Pei and Qi Xiaojuan},\n  journal={arXiv preprint arXiv:2609.23796},\n  year={2026}\n}",
   }],
   posts: [],
 };

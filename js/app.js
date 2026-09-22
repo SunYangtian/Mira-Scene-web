@@ -202,14 +202,19 @@
   }
 
   /** 标题里 *星号* 包住的词渲染成品牌色强调；其余部分转义。 */
-  function titleHTML(title) {
-    return String(t(title) ?? '')
+  function titleHTML(title, breakAfter = '') {
+    const formatTitlePart = (value) => String(value)
       .split(/(\*[^*]+\*)/g)
       .map((part) =>
         /^\*[^*]+\*$/.test(part)
           ? `<em>${esc(part.slice(1, -1))}</em>`
           : esc(part))
       .join('');
+    const raw = String(t(title) ?? '');
+    if (breakAfter && raw.startsWith(`${breakAfter} `)) {
+      return `${formatTitlePart(breakAfter)}<br class="hero-title-break"><span class="hero-title-continuation">${formatTitlePart(raw.slice(breakAfter.length + 1))}</span>`;
+    }
+    return formatTitlePart(raw);
   }
 
   /** 去掉标题里的强调星号，用于 meta、aria-label、切换器这些纯文本场合 */
@@ -247,7 +252,7 @@
       if (back) wrap.append(back);
     }
 
-    wrap.append(el('h1', { class: 'hero__title', id: 'project-title' }, titleHTML(p.title)));
+    wrap.append(el('h1', { class: 'hero__title', id: 'project-title' }, titleHTML(p.title, p.titleBreakAfter)));
     if (p.subtitle) wrap.append(el('p', { class: 'hero__subtitle' }, rich(t(p.subtitle))));
 
     // 会议信息：标题下方一行居中排版，两侧发丝线。没写 venue 就整块不出现。
