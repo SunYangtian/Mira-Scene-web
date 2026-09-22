@@ -1,5 +1,5 @@
 # Mira-Scene static site
 
-Project page: [sunyangtian.github.io/Mira-Scene-web](https://sunyangtian.github.io/Mira-Scene-web/)
+Project page: [vast-ai-research.github.io/eden-page/?p=mira-scene](https://vast-ai-research.github.io/eden-page/?p=mira-scene)
 
 Code repository: [github.com/VAST-AI-Research/Mira-Scene](https://github.com/VAST-AI-Research/Mira-Scene)

@@ -1,126 +1,20 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<!-- 下面这些 meta 的内容会被 js/app.js 按当前页面动态改写；
-     这里的值是没有 JS 时的兜底 / 爬虫首屏看到的默认值。 -->
-<title>Mira-Scene: Pixel-Aligned Layouts for Generative 3D Scene Reconstruction</title>
-<meta name="description" content="Mira-Scene: Pixel-Aligned Layouts for Generative 3D Scene Reconstruction">
-<meta name="keywords" content="Mira-Scene, 3D scene reconstruction, canonical coordinate map, generative 3D scene">
-<meta name="author" content="Yang-Tian Sun et al.">
-<link rel="canonical" href="">
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="Mira-Scene: Pixel-Aligned Layouts for Generative 3D Scene Reconstruction">
-<meta property="og:description" content="Pixel-aligned layouts for generative 3D scene reconstruction.">
-<meta property="og:image" content="assets/teaser.jpg">
-<meta name="twitter:card" content="summary_large_image">
-
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-
-<!-- 字体：Inter（正文/UI）+ Source Serif 4（摘要）+ JetBrains Mono（代码）
-     不想依赖 Google Fonts 就删掉这三行，CSS 里有系统字体兜底。 -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap">
-
-<link rel="stylesheet" href="css/style.css?v=20260922-2">
-<link rel="stylesheet" href="css/static-index.css?v=20260919-1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, follow">
+  <meta http-equiv="refresh" content="0; url=https://vast-ai-research.github.io/eden-page/?p=mira-scene">
+  <link rel="canonical" href="https://vast-ai-research.github.io/eden-page/?p=mira-scene">
+  <title>Mira-Scene — Redirecting</title>
+  <script>
+    window.location.replace("https://vast-ai-research.github.io/eden-page/?p=mira-scene");
+  </script>
 </head>
-
-<body data-static-site="true">
-<!-- 下面这些静态文案由 js/app.js 的 initLang() 按当前语言改写，
-     这里填的是无 JS 时的兜底值。 -->
-<a class="skip-link" id="skip-link" href="#main">跳到正文</a>
-<div class="progress" id="progress" aria-hidden="true"></div>
-
-<!-- ==============================================================  header
-     铺满整宽。左：team name。中：Research / Blog 主导航。
-     右：项目切换器（只在项目详情页出现）+ 主题切换。 -->
-<header class="site-header" id="site-header">
-  <div class="header-inner">
-    <a class="brand" id="brand-link" href="?">
-      <img class="brand__logo" id="brand-logo" src="assets/favicon.svg" alt="">
-      <span class="brand__name">
-        <span class="full" id="brand-full">Team Name</span>
-        <span class="short" id="brand-short">TEAM</span>
-      </span>
-    </a>
-
-    <nav class="header-nav" id="header-nav" aria-label="主导航"></nav>
-
-    <span class="header-spacer"></span>
-
-    <!-- 项目切换器：列表页会被 JS 隐藏 -->
-    <div class="switcher" id="switcher" hidden>
-      <button class="switcher__btn" id="switcher-btn" type="button"
-              aria-haspopup="listbox" aria-expanded="false" aria-controls="switcher-menu">
-        <span class="label" id="switcher-label">Projects</span>
-        <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-             stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="m6 9 6 6 6-6"/>
-        </svg>
-      </button>
-      <div class="switcher__menu" id="switcher-menu" role="listbox"
-           aria-label="选择项目" data-open="false"></div>
-    </div>
-
-    <!-- 中英切换：按钮上显示的是"当前语言"，点一下换到另一种 -->
-    <button class="lang-btn" id="lang-toggle" type="button" aria-label="切换语言">中</button>
-
-    <a class="demo-nav-link" href="static-demo.html" aria-label="Open interactive demo">Interactive Demo</a>
-
-    <button class="icon-btn" id="theme-toggle" type="button" aria-label="切换深浅色模式"></button>
-  </div>
-</header>
-
-<!-- ================================================================ main -->
-<main id="main">
-  <!-- hero 由 js 渲染：列表页是栏目标题，详情页是论文标题/作者/链接/teaser -->
-  <div class="hero" id="hero">
-    <div class="wrap">
-      <p id="hero-placeholder" style="padding:5rem 0;color:var(--text-muted)">正在加载…</p>
-    </div>
-  </div>
-
-  <!-- 章节内导航，吸附在 header 下面（只有详情页会填充） -->
-  <nav class="toc" id="toc" aria-label="章节导航" hidden></nav>
-
-  <!-- 列表页的卡片 / 详情页的各 section 都插到这里 -->
-  <div id="sections"></div>
-</main>
-
-<!-- ============================================================== footer -->
-<footer class="site-footer">
-  <div class="wrap footer-grid">
-    <div>
-      <strong id="footer-team" style="color:var(--text);font-size:1rem"></strong>
-      <p id="footer-note" style="margin-top:.4rem;max-width:46ch"></p>
-    </div>
-    <nav class="footer-links" id="footer-links" aria-label="页脚链接"></nav>
-  </div>
-  <div class="wrap">
-    <p class="credit" id="footer-credit"></p>
-  </div>
-</footer>
-
-<!-- ============================================================ lightbox -->
-<div class="lightbox" id="lightbox" data-open="false" role="dialog" aria-modal="true" aria-label="放大预览">
-  <button class="lightbox__close" id="lightbox-close" type="button" aria-label="关闭预览">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
-         stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
-  </button>
-  <div class="lightbox__inner">
-    <div id="lightbox-stage"></div>
-    <p class="lightbox__caption" id="lightbox-caption"></p>
-  </div>
-</div>
-
-<!-- 内容数据。改内容只动这个文件。 -->
-<script src="data/projects.js?v=20260922-2"></script>
-<script src="js/app.js?v=20260922-2"></script>
-<script src="js/static-index.js?v=20260919-1"></script>
+<body>
+  <p>
+    The Mira-Scene project page has moved.
+    <a href="https://vast-ai-research.github.io/eden-page/?p=mira-scene">Continue to the new project page</a>.
+  </p>
 </body>
 </html>
